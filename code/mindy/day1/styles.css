@@ -1,0 +1,18 @@
+body {background-color: #000000;
+margin: 0px;
+margin-top: 0px;
+margin-left: 0px;
+margin-bottom: 0px;
+margin-right: 0px;}
+
+td {color: #DBDBDB;
+font-size: 10pt;
+font-family: Tahoma, Arial, Sans-Serif;
+line-height: 80%;
+text-align: justify;}
+
+.poem {color: #DBDBDB;
+font-size: 10pt;
+font-family: Tahoma, Arial, Sans-Serif;
+line-height: 120%;
+text-align: justify;}
