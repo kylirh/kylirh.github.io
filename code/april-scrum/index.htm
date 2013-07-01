@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <title>Kylir's April Scrum</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <article class="container">
+        <h1 class="title active transition">Kylir's April Scrum</h1>
+        <h3 class="sub-title active transition">kylir.com/april</h3>
+        <div class="slide hidden transition">
+            <section class="task completed transition">
+                <h2 class="task-header">1024 UI / Field Mode (<a target="king-carl" href="http://kingcarl/work/WorkManagement/WoGeneralEdit.aspx?WorkOrderId=2308">#2308</a>)</h2>
+                <ul class="task-details">
+                    <li><a target="demo" href="http://nanphi/Cityworks.WebApp/Default.aspx">Demo</a></li>
+                    <li>Removed "full screen mode". Made lots of enhancements/fixes.</li>
+                    <li>Scrolling does not work with iOS and Android browsers</li>
+                    <li>The Silverlight map hides the menu in non-Firefox browsers</li>
+                    <li>Ideas: Menu icons, "special menus", replace other menus, small touch ups</li>
+                </ul>
+            </section>
+            <section class="task completed transition">
+                <h2 class="task-header">Inspection Observations with Radio Buttons (<a target="king-carl" href="http://kingcarl/work/WorkManagement/WoGeneralEdit.aspx?WorkOrderId=2648">#2648</a>)</h2>
+                <ul class="task-details">
+                    <li><a target="demo" href="http://nanphi/Cityworks.WebApp/WorkManagement/InspectionEdit.aspx?Inspectionid=8054">Linear observations</a></li>
+                    <li><a target="demo" href="http://nanphi/Cityworks.WebApp/WorkManagement/InspectionEdit.aspx?Inspectionid=8057">Branched observations</a></li>
+                    <li>Set the "InspObservationsRadioButtons" domain or user preference to "Y"</li>
+                    <li>I don't understand the problem this enhancement solves. Is this the right solution?</li>
+                </ul>
+            </section>
+            <section class="task completed transition">
+                <h2 class="task-header">Error Pages</h2>
+                <ul class="task-details">
+                    <li><a target="demo" href="http://nanphi/Cityworks.WebApp/404-Not-Found.aspx">Missing Page (404)</a></li>
+                    <li><a target="demo" href="http://nanphi/Cityworks.WebApp/Broken-Page.aspx">Error Page</a></li>
+                    <li>Configurable via Web.config:<br />
+                        <pre class="code">&lt;customErrors mode=&quot;RemoteOnly&quot; defaultRedirect=&quot;~/Error/index.htm&quot;&gt;
+    &lt;error statusCode=&quot;404&quot; redirect=&quot;~/Error/404.htm&quot; /&gt;
+&lt;/customErrors&gt;</pre>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </article>
+</body>
+</html>
