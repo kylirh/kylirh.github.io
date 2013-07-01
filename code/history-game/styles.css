@@ -1,0 +1,3 @@
+body { font-family:Helvetica, Verdana, Sans-Serif; font-size:13px; margin:0; padding:50px; }
+#status { margin:50px auto; width:250px; padding:10px; color:#cc0000; font-weight:bold; border:solid 1px #660000; background:#ffe1ae; }
+#map { font-family:Courier New, monospace; text-align:center; margin:50px auto; color:#444; background:#ddd; border:solid 1px #ccc; padding:10px; font-size:1.5em; font-weight:bold; width:300px; }
