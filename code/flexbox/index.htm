@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Experiments</title>
+    <style type="text/css">
+        html, body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+
+        a, a:link, a:visited { color: #4385c2; text-decoration: none; }
+        a, a:hover, a:active { color: #20578b; text-decoration: underline; }
+
+        ul {
+            margin: 10px 20px 20px 20px;
+            padding: 0;
+            border: solid 1px #ccc;
+            background: #eee;
+            border-radius: 4px;
+        }
+
+        li {
+            color: #313626;
+            text-shadow: 0 1px 0 #deff00;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            background: -webkit-linear-gradient(top, #dbff6f 0%, #b5e667 100%);
+            border: solid 1px #87cd4e;
+            margin: 15px;
+            padding: 3px 5px;
+            list-style: none;
+        }
+
+        .flexbox {
+            display: -webkit-flex;
+        }
+
+        .inline-flexbox {
+            display: -webkit-inline-flex;
+        }
+
+        .flexbox-column {
+            display: -webkit-flex;
+            -webkit-flex-direction: column;
+        }
+
+        .flexbox-column-reverse {
+            display: -webkit-flex;
+            -webkit-flex-direction: column-reverse;
+        }
+
+        .flexbox-wrap {
+            display: -webkit-flex;
+            width: 300px;
+            -webkit-flex-wrap: wrap;
+        }
+
+        .flexbox-wrap-reverse {
+            display: -webkit-flex;
+            width: 300px;
+            -webkit-flex-wrap: wrap-reverse;
+        }
+
+        .flexbox-flow {
+            display: -webkit-flex;
+            width: 300px;
+            -webkit-flex-flow: row wrap;
+        }
+
+        .flexbox-flex {
+            display: -webkit-flex;
+            -webkit-flex-flow: row wrap;
+            width: 400px;
+        }
+
+        .flexbox-flex li {
+            -webkit-flex: 100px 1;
+        }
+
+        .flexbox-flex-four {
+            display: -webkit-flex;
+            -webkit-flex-flow: row wrap;
+            width: 400px;
+        }
+
+        .flexbox-flex-four li {
+            -webkit-flex: 100px 1;
+        }
+
+        .flexbox-flex-four li:first-child {
+            -webkit-flex: 100px 4;
+        }
+
+        .flexbox-order {
+            display: -webkit-flex;
+        }
+
+        .flexbox-order li:nth-child(1) {
+            -webkit-order: 2;
+        }
+
+        .flexbox-crazy {
+            display: -webkit-flex;
+            height: 300px;
+            width: 600px;
+            -webkit-justify-content: space-around;
+            -webkit-align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Experiments</h1>
+    <p>
+        Tested with and developed for Chrome 22. Save the whales.<br />
+        Links: <a href="http://dev.w3.org/csswg/css3-flexbox/">W3C Spec</a> and <a href="http://umaar.github.com/css-flexbox-demo/">Umar Hansa's GitHub Demo</a> and <a href="http://www.inserthtml.com/2012/05/css3-flex-box-specification-change-layout-design/">some article I haven't read, but looks up-to-date</a>.
+    </p>
+
+    <h2>display: flex</h2>
+    <ul class="flexbox">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>display: inline-flex</h2>
+    <ul class="inline-flexbox">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex-direction: column</h2>
+    <ul class="flexbox-column">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex-direction: column-reverse</h2>
+    <ul class="flexbox-column-reverse">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex-wrap: wrap</h2>
+    <ul class="flexbox-wrap">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex-wrap: wrap-reverse</h2>
+    <ul class="flexbox-wrap-reverse">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex-flow: row wrap</h2>
+    <ul class="flexbox-flow">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex: 100px 1</h2>
+    <ul class="flexbox-flex">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>flex: 100px 4</h2>
+    <ul class="flexbox-flex-four">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>order: 2</h2>
+    <ul class="flexbox-order">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+    <h2>Fun with newest alignments</h2>
+    <ul class="flexbox-crazy">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+</body>
+</html>
