@@ -1,0 +1,99 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.ratio-keeper {
+  width: 100%;
+  max-width: 940px;
+  position: relative;
+  margin: 0 auto;
+}
+.ratio-keeper::after {
+  padding-top: 52%;
+  display: block;
+  content: '';
+}
+.hero-unit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  background: #000 url('../img/chang.gif') no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  text-shadow: 0 2px 4px #000;
+  margin-bottom: 0;
+}
+.intro {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.duplicate-intro {
+  display: none;
+  padding: 10px 20px;
+  background: red;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  text-shadow: 0 1px 0 #fff;
+  background: #ddd;
+  border: solid 1px #ccc;
+  border-top: 0;
+}
+.intro > h1 {
+  font-size: 50px;
+  padding: 15px 30px;
+  width: 100%;
+}
+.intro > p {
+  color: #ccc;
+  padding: 0px 30px 30px 30px;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.intro > p > strong {
+  color: #fff;
+}
+.intro > p > a, .duplicate-intro > p > a {
+  margin-top: 15px;
+}
+.table.player td, .table.player th {
+  text-align: center;
+}
+.table.player td:first-child, .table.player th:first-child {
+  text-align: left;
+}
+.row.spaced {
+  margin-top: 30px;
+}
+.tallies {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.tallies > span {
+  padding: 3px 15px;
+  border-right: solid 1px #ccc;
+}
+.tallies > span:last-child {
+  border-right: 0;
+}
+
+@media (max-width: 770px) {
+  .hero-unit {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .intro > h1 {
+    font-size: 26px;
+    padding: 10px 20px;
+  }
+  .duplicate-intro {
+    display: block;
+  }
+  .intro > p {
+    display: none;
+  }
+}
