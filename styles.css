@@ -9,6 +9,15 @@ body {
      cursor: default;
 }
 
+a, a:link, a:visited {
+     color: #08c;
+     text-decoration: none;
+}
+
+a:hover, a:focus {
+     text-decoration: underline;
+}
+
 .header {
      margin: 0 0 30px 0;
      padding: 20px 20px 12px 20px;
@@ -55,17 +64,21 @@ body {
      box-shadow: 0 1px 0 #fff;
 }
 
-.blurb, .social, .portfolio {
+.blurb, .social, .portfolio, .code {
      margin: 20px auto;
      padding: 0;
      width: 500px;
      line-height: 1.6em;
 }
 
-.social, .portfolio ul {
+.social, .portfolio ul, .code ul {
      list-style: none;
      margin-bottom: 40px;
      padding: 0;
+}
+
+.code li {
+     margin-bottom: 20px;
 }
 
 .social:after {
