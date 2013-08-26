@@ -1,0 +1,53 @@
+.center-section {
+    float: left;
+    width: 600px;
+    margin-left: -300px;
+}
+
+.pomodoros .completed, .pomodoros .uncompleted {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+}
+.pomodoros .completed {
+    background-image: url("/image/pomodoro-red-small.png");
+}
+.pomodoros .uncompleted {
+    background-image: url("/image/pomodoro-red-small-light.png");
+}
+#tasks .name {
+    font-size: 14pt;
+}
+#tasks .pomodoros {
+    margin-left: 10px;
+    cursor: default;
+}
+#tasks .task {
+    margin-top: 20px;
+}
+#pomodoros-before-break {
+    width: 30px;
+}
+
+.spinning {
+    background-image: url("/image/spinning-wheel.gif");
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    display: inline-block;
+}
+
+.tasks-loading {
+    color: gray;
+}
+
+.task .tags {
+    padding-right: 5px;
+    color: #0060BF;
+    font-size: .95em;
+}
+
+.task A {
+    font-size: .95em;
+}

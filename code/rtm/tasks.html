@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Remember the Pomodoro</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ext-all.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/rtm.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/lang.js"></script>
+
+    <script src="js/Task.js"></script>
+    <script src="js/Note.js"></script>
+    <script src="js/Pomodoros.js"></script>
+
+    <script src="js/jquery.pomodoro.js"></script>
+    <link href="css/pomodoro.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/lang.css">
+
+    <script src="js/messages.js"></script>
+
+    <script>
+        rtm.authToken = $.cookie('authToken');
+        rtm.restTestLogin({
+            success: init,
+            failure: function () {
+                document.location.href = 'index.html';
+            }
+        });
+
+        var langs = {
+            ru: {
+                pomodorosTitleTemplate: new Ext.Template('{completed} из {total} готово'),
+                button: {
+                    title: {
+                        addPomodoro: 'Добавить помидор',
+                        removePomodoro: 'Удалить помидор',
+                        completePomodoro: 'Завершить помидор',
+                        uncompletePomodoro: 'Отменить помидор',
+                        startTimer: 'Начать отсчёт',
+                        completeTask: 'Завершить задачу'
+                    }
+                },
+                messages: {
+                    takeShortBreak: 'Пора отдохнуть!',
+                    comeBackToWork: 'Возвращайтесь к работе!'
+                }
+            },
+            en: {
+                pomodorosTitleTemplate: new Ext.Template('{completed} of {total} completed'),
+                button: {
+                    title: {
+                        addPomodoro: 'Add pomodoro',
+                        removePomodoro: 'Remove pomodoro',
+                        completePomodoro: 'Complete pomodoro',
+                        uncompletePomodoro: 'Cancel pomodoro',
+                        startTimer: 'Start timer',
+                        completeTask: 'Complete task'
+                    }
+                },
+                messages: {
+                    takeShortBreak: 'Take a break!',
+                    comeBackToWork: 'Come back to work!'
+                }
+            },
+            ja: {
+                pomodorosTitleTemplate: new Ext.Template('{total}中{completed}が完了'),
+                button: {
+                    title: {
+                        addPomodoro: 'ポモドーロを追加する',
+                        removePomodoro: 'ポモドーロを削除する',
+                        completePomodoro: 'ポモドーロを完了する',
+                        uncompletePomodoro: 'ポモドーロをキャンセルする',
+                        startTimer: 'タイマーを開始する',
+                        completeTask: 'タスクを完了する'
+                    }
+                },
+                messages: {
+                    takeShortBreak: '休憩を取ってください！',
+                    comeBackToWork: '仕事に戻ってください！'
+                }
+            }
+        };
+        var lang = langs[getLanguage()];
+        var tpl = new Ext.XTemplate(
+                '<div id="{id}" class="task">',
+                '<tpl if="values.getTagsText()">',
+                    '<span class="tags">{[values.getTagsText()]}</span>',
+                '</tpl>',
+                '<span class="name">{name}</span>',
+                '<tpl if="pomodoros">',
+                '<span class="pomodoros" title="{[lang.pomodorosTitleTemplate.apply(values.pomodoros)]}">',
+                '<tpl for="this.pomodorosToArray(pomodoros)">',
+                '<span class="{class}">&nbsp;</span>',
+                '</tpl>',
+                '</span>',
+                '</tpl>',
+                '<tpl if="url">',
+                '   <br/>',
+                '   <a href="{[this.fixURL(values.url)]}">{url}</a>',
+                '</tpl>',
+                '<br/>',
+                '<button onclick="updateTask({id},\'addPomodoro\')"         title="{[lang.button.title.addPomodoro]}"        >+</button>',
+                '<button onclick="updateTask({id},\'removePomodoro\')"      title="{[lang.button.title.removePomodoro]}"     >-</button>',
+                '<button onclick="updateTask({id},\'completePomodoro\')"    title="{[lang.button.title.completePomodoro]}"   >D</button>',
+                '<button onclick="updateTask({id},\'uncompletePomodoro\')"  title="{[lang.button.title.uncompletePomodoro]}" >U</button>',
+                '<button onclick="startTimer({id})"                         title="{[lang.button.title.startTimer]}"         >~</button>',
+                '&nbsp;&nbsp;&nbsp;&nbsp;',
+                '<button onclick="completeTask({id})"        title="{[lang.button.title.completeTask]}"  >C</button>',
+                '</div>',
+                {
+                    pomodorosToArray: function (pomodoros) {
+                        if (!pomodoros) return [];
+                        var result = [];
+                        for (var i = 0; i < pomodoros.total; i++) {
+                            result.push(i < pomodoros.completed ? { class: 'completed' } : { class: 'uncompleted' });
+                        }
+                        return result;
+                    },
+                    fixURL: function (taskURL) {
+                        return taskURL.indexOf(':') >= 0 ? taskURL : 'http://' + taskURL;
+                    }
+                }
+        );
+        function init() {
+            $(document).ready(function () {
+                rtm.getTasks(function (tasks) {
+                    window.tasks = tasks;
+                    $('#tasks').html('');
+                    $.each(tasks, function (i, task) {
+                        tpl.append('tasks', task);
+                    });
+                });
+                rtm.on({
+                    updatestarted: function () {
+                        $('.synchronization').show();
+                    },
+                    updatecompleted: function () {
+                        $('.synchronization').hide();
+                    }
+                });
+            });
+        }
+        function findTask(taskId) {
+            var result;
+            $.each(tasks, function (i, t) {
+                if (t.id == String(taskId)) {
+                    result = t;
+                    return false;
+                }
+            });
+            return result;
+        }
+        function updateTask(taskId, action) {
+            var task = findTask(taskId);
+            task[action]();
+            tpl.overwrite(task.id, task);
+        }
+        function completeTask(taskId) {
+            var task = findTask(taskId);
+            task.completeTask();
+            $('#' + taskId).remove();
+        }
+
+        sounds = {};
+        function getSound(path) {
+            if (!sounds[path]) {
+                sounds[path] = new Audio(path);
+            }
+            return sounds[path];
+        }
+        function showComeBackToWorkMessage() {
+            var comeBackSound = getSound('sound/DingLing.wav');
+            comeBackSound.volume = 0.2;
+            comeBackSound.play();
+            showMessage(lang.messages.comeBackToWork);
+        }
+        function startTimer(taskId) {
+            $(document).bind('pomodoro.finish.' + taskId, function () {
+                updateTask(taskId, 'completePomodoro');
+                $('#pomodoros-before-break').val(+$('#pomodoros-before-break').val() + 1);
+                var completedSound = getSound('sound/Bell.wav');
+                completedSound.volume = 0.2;
+                completedSound.play();
+                showMessage(lang.messages.takeShortBreak, function () {
+                    $(document).unbind('.' + taskId);
+                    $(document).bind('pomodoro.finish.' + taskId, function () {
+                        $(document).unbind('.' + taskId);
+                        showComeBackToWorkMessage();
+                    });
+                    // we have to use 1-second delay here, because otherwise pomodoro timer either does not start,
+                    // or does not fade the screen, or does not call callback.
+                    setTimeout(function () {
+                        $.pomodoro($.pomodoro.settings.shortBreakInMinutes);
+                    }, 1000);
+                });
+            });
+            $(document).bind('pomodoro.cancel.' + taskId, function () {
+                $(document).unbind('.' + taskId);
+            });
+            $.pomodoro();
+        }
+        function longBreak() {
+            $(document).bind('pomodoro.finish.longbreak', function () {
+                $(document).unbind('.longbreak');
+                $('#pomodoros-before-break').val(0);
+                showComeBackToWorkMessage();
+            });
+            $(document).bind('pomodoro.cancel.longbreak', function () {
+                $(document).unbind('.longbreak');
+            });
+            $.pomodoro($.pomodoro.settings.longBreakInMinutes);
+        }
+    </script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tasks.css">
+    <style>
+        .synchronization {
+            background: yellow;
+            display: none;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <section class="top-section">
+        <div class="synchronization">
+            <span class="lang en">Synchronization ...</span>
+            <span class="lang ru">Синхронизация ...</span>
+            <span class="lang ja">同期...</span>
+        </div>
+    </section>
+    <section class="left-section">&nbsp;</section>
+    <section class="center-section">
+        <div class="navigation">
+            <div class="navigation">
+                <a href="/">Home</a>
+                <a href="tasks.html">Tasks</a>
+            </div>
+        </div>
+        <div class="left logo-small">&nbsp;</div>
+        <h1>
+            <span class="lang en">Tasks</span>
+            <span class="lang ru">Задачи</span>
+            <span class="lang ja">タスク・リスト</span>
+        </h1>
+        <div class="center">
+            <div id="tasks">
+                <div class="tasks-loading">
+                    <span class="spinning">&nbsp;</span>
+                    <span class="lang en">Loading of tasks ...</span>
+                    <span class="lang ru">Загрузка задач ...</span>
+                    <span class="lang ja">タスク・リストの読み込み中...</span>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>
+                <span class="lang en">Pomodoros since the last long break:</span>
+                <span class="lang ru">Помидоров с момента большого перерыва:</span>
+                <span class="lang ja">最後の長めの休憩からのポモドーロ数</span>
+                <input type="text" id="pomodoros-before-break" value="0" />
+                <br />
+                <button onclick="longBreak()">
+                    <span class="lang en">Take a 15-minutes break</span>
+                    <span class="lang ru">Отдохнуть 15 минут</span>
+                    <span class="lang ja">15分の休憩を取る。</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="hidden">
+            <div class="lang en notification-permissions">
+                Now the application uses alert for messages. Allow the application to show notifications in the system tray?
+            <button onclick="requestPermissionsAndHideButton()">Configure notifications</button>
+            </div>
+            <div class="lang ru notification-permissions">
+                Сейчас приложение использует alert для сообщений. Разрешить приложению показывать уведомления в трее?
+            <button onclick="requestPermissionsAndHideButton()">Настроить уведомления</button>
+            </div>
+            <div class="lang ja notification-permissions">
+                このアプリケーションはメッセージに対するアラートを使用しています。アプリケーションがシステムトレイに通知を表示することを許可しますか？
+            <button onclick="requestPermissionsAndHideButton()">通知を設定する</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
