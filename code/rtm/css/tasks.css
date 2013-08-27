@@ -11,10 +11,10 @@
     display: inline-block;
 }
 .pomodoros .completed {
-    background-image: url("/image/pomodoro-red-small.png");
+    background-image: url("../image/pomodoro-red-small.png");
 }
 .pomodoros .uncompleted {
-    background-image: url("/image/pomodoro-red-small-light.png");
+    background-image: url("../image/pomodoro-red-small-light.png");
 }
 #tasks .name {
     font-size: 14pt;
@@ -31,7 +31,7 @@
 }
 
 .spinning {
-    background-image: url("/image/spinning-wheel.gif");
+    background-image: url("../image/spinning-wheel.gif");
     height: 32px;
     width: 32px;
     line-height: 32px;
