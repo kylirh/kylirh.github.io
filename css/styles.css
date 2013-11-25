@@ -63,10 +63,10 @@ a:hover, a:focus {
      box-shadow: 0 1px 0 #fff;
 }
 
-.blurb, .social, .portfolio, .code, .blog, p {
+.about, .portfolio, .code, .blog {
      margin: 20px auto;
-     padding: 0 10px;
-     max-width: 620px;
+     padding: 0 20px;
+     max-width: 600px;
      line-height: 1.6em;
 }
 
@@ -76,12 +76,12 @@ a:hover, a:focus {
 
 .social, .portfolio ul, .code ul {
      list-style: none;
-     margin-bottom: 40px;
+     margin: 0 auto 40px auto;
      padding: 0;
 }
 
-.code li {
-     margin-bottom: 20px;
+.social {
+     max-width: 500px;
 }
 
 .social:after {
@@ -135,10 +135,19 @@ a:hover, a:focus {
      margin-right: 0;
 }
 
+.code li {
+     margin-bottom: 20px;
+}
+
 img {
      vertical-align: bottom;
      margin-right: 10px;
      border: 0;
+}
+
+.portfolio li {
+     margin: 0 auto;
+     max-width: 500px;
 }
 
 .portfolio img {
@@ -159,4 +168,23 @@ img {
 .blurb b {
      font-size: 2.2em;
      margin-right: 6px;
+}
+
+@media all and (max-width: 600px) {
+     .social {
+          max-width: 250px;
+     }
+
+     .social a {
+          margin-right: 0;
+     }
+
+     .portfolio li {
+          max-width: 250px;
+     }
+
+     .portfolio img {
+          max-width: 250px;
+          margin: 0 0 10px 0;
+     }
 }
