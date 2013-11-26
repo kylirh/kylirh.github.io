@@ -67,7 +67,18 @@ a:hover, a:focus {
      margin: 20px auto;
      padding: 0 20px;
      max-width: 600px;
-     line-height: 1.6em;
+     line-height: 1.8em;
+}
+
+.blog img {
+     max-width: 500px;
+     border: solid 1px #d4d4d4;
+     background: #fff;
+     padding: 4px;
+     border-radius: 4px;
+     box-shadow: 0 2px 6px #ddd;
+     display: block;
+     margin: 40px auto;
 }
 
 .posts {

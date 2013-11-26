@@ -9,10 +9,10 @@ Things are not off to a good start. In fact, I missed a day... or eight... befor
 
 Totally sustainable. There's no way I can fail now, right?
 
-Anyway, on to today's cool thing. After adding a blog to my site for [Day 1]({% post_url 2013-11-17-cool-things %}) I noticed it looked kind of wonky on a mobile device, something like this:
+Anyway, on to today's cool thing. After adding a blog to my site for [Day 1]({% post_url 2013-11-17-100-cool-things %}) I noticed it looked kind of wonky on a mobile device, something like this:
 
-![This doesn't look so great on an iPhone](/img/day2/before.jpg)
+![This doesn't look so great on an iPhone](/img/day2/before.png)
 
 I went through the various pages and tweaked them all to be pretty decent looking on my iPhone, iPad, and desktop machine. There's a bit of responsive design baked in too. I think it is good enough for now. What do you think?
 
-![Maybe the site's style ain't the greatest, but at least it is the same on an iPhone!](/img/day2/after.jpg)
+![Maybe the site's style ain't the greatest, but at least it is the same on an iPhone!](/img/day2/after.png)
