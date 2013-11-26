@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Day 3 - RSS Feed"
+date:   2013-11-25 07:12:00
+categories: 100-cool-things
+---
+
+Alright, today's cool thing happened a lot more smoothly than yesterday's. Originally I wanted to make a quick website for an annual paintball tournament that I do each year. However, there's some graphics and a sweet video that I want to make for it first, so it'll have to wait until another day. I decided instead to add an [RSS feed][jekyll-feed] to my site. Adding the feed to my site was amazingly easy and simple. I made a _plugins folder, dropped the Ruby script from GitHub into it, set some values in my _config.yml file, and added a RSS link to my pages. Whammo sammo, I'm done! Unfortunately, GitHub doesn't allow plugins (for obvious security reasons), so for now I'm manually copying the generated RSS feed into my GitHub repo.
+
+[jekyll-feed]: https://github.com/agelber/jekyll-rss
