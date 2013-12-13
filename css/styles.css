@@ -146,6 +146,21 @@ a:hover, a:focus {
      margin-right: 0;
 }
 
+.social.wishlist a {
+     text-align: center;
+     padding: 20px 10px 10px 10px;
+}
+
+.social.wishlist img {
+     margin-right: 0;
+     border: solid 1px #999;
+     width: 175px;
+     height: 175px;
+     background: #fff;
+     border-radius: 4px;
+     padding: 4px;
+}
+
 .code li {
      margin-bottom: 20px;
 }
