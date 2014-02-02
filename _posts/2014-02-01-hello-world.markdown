@@ -6,6 +6,6 @@ date:   2014-02-01 18:09:00
 
 # Hello World!
 
-Here's the first post in my blog! But don't hold your breath. My blog will most likely amount to nothing. I've tried many, many times in the past to create useful content for the Internets. It's tough. I usually consistently produce content for a while and then fizzle out. But I am in love with the idea, so maybe one of these days I'll get something really good going.
+Welcome to the first post in my blog! But please, don't hold your breath. This could very well amount to nothing. I've tried many times before to create a useful blog with decent content. It's tough. I usually do well for a month or two and then fizzle out. I am in love with the idea of blogging, so maybe something will work out this time.
 
 Anyway, if you're read this, well... I'm surprised! Thanks for stopping by.
