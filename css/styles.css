@@ -208,16 +208,9 @@ img {
 }
 
 #disqus_thread {
-     border-top: solid 1px #ddd;
+     border-top: solid 2px rgba(0,39,59,.08);
      margin-top: 50px;
-}
-
-#disqus_thread > div:first-child > div:first-child {
-     margin-top: 20px !important;
-}
-
-#disqus_thread > iframe {
-     border-top: solid 1px #fff !important;
+     padding-top: 2px;
 }
 
 @media all and (max-width: 600px) {
