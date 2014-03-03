@@ -212,6 +212,10 @@ img {
      margin-top: 50px;
 }
 
+#disqus_thread > div:first-child > div:first-child {
+     margin-top: 20px !important;
+}
+
 #disqus_thread > iframe {
      border-top: solid 1px #fff !important;
 }
