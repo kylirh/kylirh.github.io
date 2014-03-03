@@ -5,7 +5,7 @@ comments: true
 <h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
 {{ content }}
-% if page.comments %
+{% if page.comments %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'kylir';
@@ -16,4 +16,4 @@ comments: true
     })();
 </script>
 <noscript>Please enable JavaScript to view comments.</noscript>
-% endif %
+{% endif %}
