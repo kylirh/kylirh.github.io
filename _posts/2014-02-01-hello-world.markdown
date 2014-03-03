@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Hello World"
-date:   2014-02-01 18:09:00
+title: "Hello World"
+date: 2014-02-01 18:09:00
 ---
 
 # Hello World!
