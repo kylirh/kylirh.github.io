@@ -207,6 +207,15 @@ img {
      margin-right: 6px;
 }
 
+#disqus_thread {
+     border-top: solid 1px #ddd;
+     margin-top: 50px;
+}
+
+#disqus_thread > iframe {
+     border-top: solid 1px #fff;
+}
+
 @media all and (max-width: 600px) {
      .social {
           max-width: 250px;
