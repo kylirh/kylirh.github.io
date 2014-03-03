@@ -213,7 +213,7 @@ img {
 }
 
 #disqus_thread > iframe {
-     border-top: solid 1px #fff;
+     border-top: solid 1px #fff !important;
 }
 
 @media all and (max-width: 600px) {
