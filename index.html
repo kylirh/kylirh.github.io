@@ -1,14 +1,5 @@
 ---
 layout: main
-title: Kylir's Blog
 ---
 
-<p class="blurb">
-	<b>Hi!</b> Welcome to my website!<br>
-	I am a software developer and UI designer from Salt Lake City, Utah.
-</p>
-<ul class="posts">
-	{% for post in site.posts %}
-		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
+{{ site.posts[0].content }}
