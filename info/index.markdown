@@ -4,9 +4,7 @@ title: Info
 section: info
 ---
 
-<h2>
-     This page is about me. I work in Salt Lake City. Blah blah blah. More blah coming soon! Here are some other places you can find me:
-</h2>
+##This page is about me. I work in Salt Lake City. I write software and design stuff. Blah blah blah with more blah coming soon. Find me elsewhere on the Internets.
 <ul class="social">
      <li>
           <a href="http://vast.ms"><img src="vastmedia.png" />Vast Media</a>

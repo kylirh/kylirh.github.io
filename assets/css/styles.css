@@ -1,3 +1,5 @@
+/***** GENERAL STYLES *****/
+
 *, *:before, *:after {
      -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
@@ -17,34 +19,112 @@ body {
      max-width: 1260px; 
 }
 
+nav a, nav a:link, nav a:visited {
+     width: 25%;
+     border-bottom: solid 2px rgba(0, 0, 0, 0.3);
+     margin: 0;
+     display: inline-block;
+     padding: 40px 10px 30px 60px;
+     vertical-align: bottom;
+     color: #3a3a3a;
+     text-decoration: none;
+}
+
+nav a:hover, nav a:focus, nav a.selected {
+     color: #08c;
+     border-bottom: solid 4px #08c;
+     padding-bottom: 28px;
+}
+
+nav a:first-child {
+     padding-left: 90px;
+}
+
+nav img {
+     vertical-align: middle;
+     border: 0;
+}
+
 article {
      width: 60%;
      margin: 0 auto;
 }
 
-a, a:link, a:visited {
+header h1 {
+     margin-bottom: 0;
+     padding-bottom: 0;
+     line-height: 1em;
+}
+
+header p {
+     margin-top: 0;
+     padding-top: 0;
+     line-height: 1em;
+     font-size: 0.8em;
+     color: #888;
+}
+
+header a, header a:link, header a:visited {
+     color: #3a3a3a;
+     text-decoration: none;
+}
+
+header a:hover, header a:focus {
      color: #08c;
      text-decoration: none;
 }
 
+a, a:link, a:visited {
+     color: #08c;
+     text-decoration: none;
+     -webkit-transition: all 0.2s ease-in-out;
+     transition: all 0.2s ease-in-out
+}
+
 a:hover, a:focus {
+     text-decoration: underline;
+     -webkit-transition: all 0.2s ease-in-out;
+     transition: all 0.2s ease-in-out
+}
+
+footer {
+     margin: 40px 0 20px 0;
+     border-top: solid 2px rgba(0, 0, 0, 0.3);
+     padding: 20px 20px 10px 20px;
+}
+footer a:last-child {
+     float: right;
+}
+
+
+
+/***** HOME PAGE STYLES *****/
+
+#toggleComments {
+     border: 0;
+     background: transparent;
+     color: #08c;
+     margin: 0;
+     padding: 0;
+     display: block;
+     text-align: center;
+     width: 100%;
+}
+
+#toggleComments:hover, #toggleComments:active {
+     background: transparent;
+     border: 0;
      text-decoration: underline;
 }
 
-.about, .portfolio, .code, .blog {
-     margin: 20px auto;
-     padding: 0 20px;
-     max-width: 600px;
-     line-height: 1.8em;
-}
 
-.social, .portfolio ul, .code ul {
+
+/***** INFO PAGE STYLES *****/
+
+.social {
      list-style: none;
      margin: 0 auto 40px auto;
      padding: 0;
-}
-
-.social {
      max-width: 500px;
 }
 
@@ -114,47 +194,6 @@ a:hover, a:focus {
      padding: 4px;
 }
 
-.code li {
-     margin-bottom: 20px;
-}
-
-img {
-     vertical-align: bottom;
-     margin-right: 10px;
-     border: 0;
-}
-
-.portfolio li {
-     margin: 0 auto;
-     max-width: 500px;
-}
-
-.portfolio img {
-     max-width: 500px;
-     margin: 0 0 10px 0;
-}
-
-.me {
-     border: solid 1px #d4d4d4;
-     background: #fff;
-     padding: 3px;
-     border-radius: 4px;
-     box-shadow: 0 2px 6px #ddd;
-     width: 64px;
-     height: 64px;
-}
-
-.blurb b {
-     font-size: 2.2em;
-     margin-right: 6px;
-}
-
-#disqus_thread {
-     border-top: solid 2px rgba(0,39,59,.08);
-     margin-top: 50px;
-     padding-top: 2px;
-}
-
 @media all and (max-width: 600px) {
      .social {
           max-width: 250px;
@@ -162,18 +201,5 @@ img {
 
      .social a {
           margin-right: 0;
-     }
-
-     .portfolio li {
-          max-width: 250px;
-     }
-
-     .portfolio img {
-          max-width: 250px;
-          margin: 0 0 10px 0;
-     }
-
-     .blog img {
-          max-width: 250px;
      }
 }

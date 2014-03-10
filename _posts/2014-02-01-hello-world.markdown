@@ -6,5 +6,4 @@ comments: true
 section: blog
 ---
 
-#Hello World
-Welcome to my blog! This baby is just getting started! Right now I'm still working out the kinks with its design and setup. I'm hoping that in the near future I'll switch over to producing top-notch content. Stay tuned for (hopefully) great things!
+Welcome to my blog! This baby is just getting started. Right now I'm still working out the kinks with its design and setup. I'm hoping that in the near future I'll switch over to producing decent content. Stay tuned for (hopefully) great things!

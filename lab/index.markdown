@@ -4,9 +4,7 @@ title: Lab
 section: lab
 ---
 
-<h2>
-     Here's some random samples of code. They're mostly JavaScript and CSS. Look at <a href="https://github.com/kylirh">GitHub</a> and <a href="http://codepen.io/kylirh">CodePen</a> for a few more nuggets.
-</h2>
+##Here's some random samples of code. They're mostly JavaScript and CSS. Look at <a href="https://github.com/kylirh">GitHub</a> and <a href="http://codepen.io/kylirh">CodePen</a> for a few more nuggets.
 <ul>
      <li>
           <a href="reveal">More Scrum Reveal Slides</a><br />

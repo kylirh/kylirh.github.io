@@ -3,9 +3,7 @@ layout: main
 title: Wishlist
 ---
 
-<h2>
-	Here are some wish lists for various people in the familia.
-</h2>
+##Here are some wish lists for various people in the familia.
 <ul class="wishlist">
 	<li>
 		<a href="http://wishlistr.com/kylirh"><img src="img/kylir.jpg" /><br>Kylir</a>

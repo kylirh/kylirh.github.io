@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Kylir Horton</title>
+    <link>http://kylir.com</link>
+    <description>RSS feed for Kylir Horton</description>
+    <pubDate>Sun, 09 Mar 2014 18:21:00 -0000</pubDate>
+    <item>
+      <title>Hello World</title>
+      <link>http://kylir.com/2014/03/09/hello-world.html</link>
+      <description>&lt;h1 id='hello_world'&gt;Hello World&lt;/h1&gt;
+
+&lt;p&gt;Welcome to my blog! This baby is just getting started. Right now I&amp;#8217;m still working out the kinks with its design and setup. I&amp;#8217;m hoping that in the near future I&amp;#8217;ll switch over to producing decent content. Stay tuned for (hopefully) great things!&lt;/p&gt;</description>
+      <pubDate>Sun, 09 Mar 2014 18:21:00 -0000</pubDate>
+      <dc:date>2014-03-09T18:21:00Z</dc:date>
+    </item>
+    <dc:date>2014-03-09T18:21:00Z</dc:date>
+  </channel>
+</rss>
