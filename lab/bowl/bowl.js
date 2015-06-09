@@ -1,10 +1,6 @@
 function Scorecard() {
     var self = this;
 
-    function isNumeric(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
-
     function getPoints(bowl) {
         return (!isNaN(parseFloat(bowl)) && isFinite(bowl)) ? bowl : 0;
     }
@@ -15,10 +11,6 @@ function Scorecard() {
             self.frames[self.frames.length - 1].total = self.frames[self.frames.length - 2].total;
         }
     };
-
-    function lastFrame() {
-        return self.frames[self.frames.length - 1];
-    }
 
     function Frame() {
         var self = this;
@@ -37,7 +29,7 @@ function Scorecard() {
         addFrame();
 
         for (var i = 0; i < bowls.length; i++) {
-            var frame = lastFrame();
+            var frame = self.frames[self.frames.length - 1];
             var bowl = bowls[i];
             frame.addBowl(bowl);
 
@@ -66,5 +58,4 @@ function Scorecard() {
 
     this.frames = [];
 }
-
 
