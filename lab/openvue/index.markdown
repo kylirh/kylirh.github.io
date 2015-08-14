@@ -14,39 +14,6 @@ section: lab
 </ul>
 <h3>Forget-Me-Now</h3>
 <p>Say goodbye to these, because it's the last time! Now, when you do this without getting punched in the chest, you'll have more fun. Guy's a pro. Whoa, this guy's straight?</p>
-
-<div class="hv-openvue-widget">
-<style type="text/css">
-    /* Add your own HireVue form style overrides in your site stylesheet or in this style block.
-    We recommend moving this style block to the HEAD of your HTML file. */
-    .hv-openvue-widget {
-        font: 14px Helvetica, Arial, sans-serif;
-    }
-
-    .hv-openvue-widget .simple-button-widget {
-        text-transform: uppercase;
-        height: 28px;
-        line-height: 28px;
-        padding: 0 25px;
-        display: inline-block;
-        background: #eb263b;
-        color: #fff;
-        letter-spacing: 1px;
-        border: 0;
-        opacity: 1;
-        border-radius: 56px;
-        transition: all 0.2s;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .hv-openvue-widget .simple-button-widget:hover, .hv-openvue-widget .simple-button-widget:focus {
-        background: #b3031b;
-    }
-</style>
-<a class="simple-button-widget" href="https://app.lochv.com/openvue/WWmGPAiu6W/" target="_blank">Interview Now</a>
-  </div>
-
 <h4>Top Banana</h4>
 <p>I'm a monster. I hear the jury's still out on science. Army had half a day.</p>
 <ol>
