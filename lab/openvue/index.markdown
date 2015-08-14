@@ -4,10 +4,7 @@ title: Lab
 section: lab
 ---
 
-##Here's some random samples of code. They're mostly JavaScript and CSS. Look at <a href="https://github.com/kylirh">GitHub</a> and <a href="http://codepen.io/kylirh">CodePen</a> for a few more nuggets.
-##OpenVue Widget Samples
-
-<h1>Pier Pressure</h1>
+<h1>OpenVue Widget Samples</h1>
 <p>Army had half a day. It's a hug, Michael. I'm hugging you. No! I was ashamed to be SEEN with you. I like being with you. Say goodbye to these, because it's the last time! I hear the jury's still out on science.</p>
 <h2>Let 'Em Eat Cake</h2>
 <p>Not tricks, Michael, illusions. There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. That's why you always leave a note! That's why you always leave a note! Guy's a pro. What's Spanish for "I know you speak English?"</p>
@@ -40,6 +37,7 @@ section: lab
         border-radius: 56px;
         transition: all 0.2s;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .hv-openvue-widget .simple-button-widget:hover, .hv-openvue-widget .simple-button-widget:focus {
