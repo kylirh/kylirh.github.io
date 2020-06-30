@@ -8,22 +8,14 @@
   <body>
     Hello Weave!
     <script>
-      let opener = window.opener;
-      let parent = window.parent;
-      console.log("===== WINDOWS =====", opener, parent);
+      let message = { token: "1234567890", ruleTheWorld: true };
 
-      let message = { token: "Whatever", ruleTheWorld: true };
-
-      if (opener) {
-        opener.postMessage(message, "*");
+      if (window.opener) {
+        console.log("Attempting to send message...");
+        window.opener.postMessage(message, "*");
+        console.log("...message sent!");
       } else {
         console.error("Aww bummer! There's no opener window!");
-      }
-
-      if (opener) {
-        parent.postMessage(message, "*");
-      } else {
-        console.error("Aww bummer! There's no parent window!");
       }
     </script>
   </body>
