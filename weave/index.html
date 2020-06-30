@@ -15,13 +15,13 @@
       let message = { token: "Whatever", ruleTheWorld: true };
 
       if (opener) {
-        opener.postMessage(message);
+        opener.postMessage(message, "*");
       } else {
         console.error("Aww bummer! There's no opener window!");
       }
 
       if (opener) {
-        parent.postMessage(message);
+        parent.postMessage(message, "*");
       } else {
         console.error("Aww bummer! There's no parent window!");
       }
