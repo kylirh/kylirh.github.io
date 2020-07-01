@@ -11,12 +11,23 @@
         if (segments.length !== 2) {
           return null;
         }
-        return new URLSearchParams(segments[1]);
+        const params = segments[1].split("&");
+        return params.reduce((map, param) => {
+          const pair = param.split("=");
+          const key = decodeURIComponent(pair[0]);
+          const value = decodeURIComponent(pair[1] || "");
+          return { ...map, [key]: value };
+        }, {});
       };
 
       if (window.opener) {
         const params = parseLoginResponse(window.location.href);
+        if (params === null) {
+          console.error("No query string arguments were received. Aborting!");
+          return;
+        }
         window.opener.postMessage(params, "*");
+        console.log("Successfully posted query string arguments!", e);
       } else {
         console.error("No parent window found. Aborting!");
       }
