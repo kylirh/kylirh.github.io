@@ -16,7 +16,7 @@
 
       if (window.opener) {
         const params = parseLoginResponse(window.location.href);
-        window.opener.postMessage(message, "*");
+        window.opener.postMessage(params, "*");
       } else {
         console.error("No parent window found. Aborting!");
       }
