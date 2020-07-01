@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weave API Test</title>
+    <script>
+      const parseLoginResponse = (url) => {
+        const separator = url.indexOf("?") > -1 ? "?" : "#";
+        const segments = url.split(separator);
+        if (segments.length !== 2) {
+          return null;
+        }
+        return new URLSearchParams(segments[1]);
+      };
+
+      if (window.opener) {
+        const params = parseLoginResponse(window.location.href);
+        window.opener.postMessage(message, "*");
+      } else {
+        console.error("No parent window found. Aborting!");
+      }
+    </script>
   </head>
   <body>
     Hello Weave!
-    <script>
-      let message = { token: "1234567890", ruleTheWorld: true };
-
-      if (window.opener) {
-        console.log("Attempting to send message...");
-        window.opener.postMessage(message, "*");
-        console.log("...message sent!");
-      } else {
-        console.error("Aww bummer! There's no opener window!");
-      }
-    </script>
   </body>
 </html>
