@@ -30,7 +30,7 @@
           window.opener.postMessage(params, "*");
           console.log("Successfully posted query string arguments!", params);
           // TODO: Only close when the opener tells you to close.
-          window.close();
+          // window.close();
         } else {
           console.error("No parent window found. Aborting!");
         }
