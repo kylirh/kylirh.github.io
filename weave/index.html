@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weave API Test</title>
     <script>
+      window.errorHandled = false;
+
       const parseQueryString = (url) => {
         const segments = url.split("#");
         if (segments.length !== 2) {
@@ -38,19 +40,22 @@
       };
 
       const handleError = (message) => {
+        window.errorHandled = true;
         console.error(message);
 
-        const errorContainer = document.querySelector("#errorContainer");
+        const errorContainer = getElementById("errorContainer");
         errorContainer.style.display = "block";
 
-        const errorDetails = document.querySelector("#errorDetails");
+        const errorDetails = getElementById("errorDetails");
         errorDetails.innerHTML = "Error Details: " + message;
       };
 
       setTimeout(() => {
-        handleError(
-          "Window timed out. An unknown error occurred. Check the developer console."
-        );
+        if (!errorHandled) {
+          handleError(
+            "An unknown error occurred. Check the developer console."
+          );
+        }
       }, 2000);
 
       postQueryString();
