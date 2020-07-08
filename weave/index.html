@@ -28,18 +28,16 @@
             return;
           }
           window.opener.postMessage(params, "*");
-          console.log("Successfully posted query string arguments!", params);
-          // TODO: Only close when the opener tells you to close.
-          // window.close();
+          window.close();
         } else {
           console.error("No parent window found. Aborting!");
         }
       };
 
+      // TODO: Show a pretty error.
+
       postQueryString();
     </script>
   </head>
-  <body>
-    Hello Weave!
-  </body>
+  <body></body>
 </html>
