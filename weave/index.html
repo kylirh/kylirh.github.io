@@ -6,8 +6,7 @@
     <title>Weave API Test</title>
     <script>
       const parseQueryString = (url) => {
-        const separator = url.indexOf("?") > -1 ? "?" : "#";
-        const segments = url.split(separator);
+        const segments = url.split("#");
         if (segments.length !== 2) {
           return null;
         }
@@ -24,11 +23,13 @@
         if (window.opener) {
           const params = parseQueryString(window.location.href);
           if (params === null) {
-            handleError("No query string arguments were received.");
+            handleError(
+              "Error parsing query string arguments. They may not have been received."
+            );
             return;
           }
           window.opener.postMessage(params, "*");
-          window.close();
+          // window.close();
         } else {
           handleError(
             "The opener window does not exist. Cannot send authentication data."
