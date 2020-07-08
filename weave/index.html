@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weave API Test</title>
     <script>
-      window.errorHandled = false;
+      let errorHandled = false;
 
       const parseQueryString = (url) => {
         const segments = url.split("#");
@@ -31,7 +28,8 @@
             return;
           }
           window.opener.postMessage(params, "*");
-          // window.close();
+          window.close();
+          handleError("Authentication window failed to close.");
         } else {
           handleError(
             "The opener window does not exist. Cannot send authentication data."
@@ -40,14 +38,23 @@
       };
 
       const handleError = (message) => {
-        window.errorHandled = true;
-        console.error(message);
+        const errorHandler = () => {
+          errorHandled = true;
+          console.error(message);
+          document.title = "Authentication Error";
 
-        const errorContainer = getElementById("errorContainer");
-        errorContainer.style.display = "block";
+          const errorContainer = document.getElementById("errorContainer");
+          errorContainer.style.display = "block";
 
-        const errorDetails = getElementById("errorDetails");
-        errorDetails.innerHTML = "Error Details: " + message;
+          const errorDetails = document.getElementById("errorDetails");
+          errorDetails.innerHTML = "Error Details: " + message;
+        };
+
+        if (document.readyState === "loading") {
+          window.onload = errorHandler;
+        } else {
+          errorHandler();
+        }
       };
 
       setTimeout(() => {
@@ -60,6 +67,9 @@
 
       postQueryString();
     </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logging into Weave...</title>
   </head>
   <body>
     <div id="errorContainer" style="display: none;">
