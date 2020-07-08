@@ -24,20 +24,44 @@
         if (window.opener) {
           const params = parseQueryString(window.location.href);
           if (params === null) {
-            console.error("No query string arguments were received. Aborting!");
+            handleError("No query string arguments were received.");
             return;
           }
           window.opener.postMessage(params, "*");
-          // window.close(); TODO: Close from the opener?
+          window.close();
         } else {
-          console.error("No parent window found. Aborting!");
+          handleError(
+            "The opener window does not exist. Cannot send authentication data."
+          );
         }
       };
 
-      // TODO: Show a pretty error.
+      const handleError = (message) => {
+        console.error(message);
+
+        const errorContainer = document.querySelector("#errorContainer");
+        errorContainer.style.display = "block";
+
+        const errorDetails = document.querySelector("#errorDetails");
+        errorDetails.innerHTML = "Error Details: " + message;
+      };
+
+      setTimeout(() => {
+        handleError(
+          "Window timed out. An unknown error occurred. Check the developer console."
+        );
+      }, 2000);
 
       postQueryString();
     </script>
   </head>
-  <body></body>
+  <body>
+    <div id="errorContainer" style="display: none;">
+      <p>
+        An error occurred. Please close this window and try again. If this
+        problem persists, contact Weave Support.
+      </p>
+      <p id="errorDetails"></p>
+    </div>
+  </body>
 </html>
