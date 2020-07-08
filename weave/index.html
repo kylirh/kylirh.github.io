@@ -28,7 +28,7 @@
             return;
           }
           window.opener.postMessage(params, "*");
-          window.close();
+          // window.close(); TODO: Close from the opener?
         } else {
           console.error("No parent window found. Aborting!");
         }
