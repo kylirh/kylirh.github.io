@@ -4,44 +4,46 @@
     <script>
       let errorHandled = false;
 
-      const parseQueryString = (url) => {
-        const segments = url.split("#");
-        if (segments.length !== 2) {
-          return null;
+      const getAuthData = () => {
+        const url = new URL(window.location.href);
+        const params =
+          url.hash !== ""
+            ? new URLSearchParams(url.hash.slice(1))
+            : url.searchParams;
+
+        let result = {};
+        for (const entry of params) {
+          const [key, value] = entry;
+          result[key] = value;
         }
-        const params = segments[1].split("&");
-        return params.reduce((map, param) => {
-          const pair = param.split("=");
-          const key = decodeURIComponent(pair[0]);
-          const value = decodeURIComponent(pair[1] || "");
-          return { ...map, [key]: value };
-        }, {});
+        return result;
       };
 
-      const postQueryString = () => {
-        if (window.opener) {
-          const params = parseQueryString(window.location.href);
-          if (params === null) {
-            handleError(
-              "Error parsing query string arguments. They may not have been received."
-            );
-            return;
-          }
-          window.opener.postMessage(params, "*");
-          //window.close();
-          handleError("Authentication window failed to close.");
-        } else {
+      const postAuthData = (data) => {
+        if (!window.opener) {
           handleError(
             "The opener window does not exist. Cannot send authentication data."
           );
+          return;
         }
+
+        if (data === null) {
+          handleError(
+            "Error parsing query string arguments. They may not have been received."
+          );
+          return;
+        }
+
+        window.opener.postMessage(data, "*");
+        window.close();
+        handleError("Authentication window failed to close.");
       };
 
       const handleError = (message) => {
         const errorHandler = () => {
           errorHandled = true;
           console.error(message);
-          document.title = "Authentication Error";
+          document.title = "An error occurred";
 
           const errorContainer = document.getElementById("errorContainer");
           errorContainer.style.display = "block";
@@ -65,11 +67,11 @@
         }
       }, 2000);
 
-      postQueryString();
+      postAuthData(getAuthData());
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Logging into Weave...</title>
+    <title>Redirecting to Weave...</title>
   </head>
   <body>
     <div id="errorContainer" style="display: none;">
