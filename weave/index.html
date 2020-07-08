@@ -28,7 +28,7 @@
             return;
           }
           window.opener.postMessage(params, "*");
-          window.close();
+          //window.close();
           handleError("Authentication window failed to close.");
         } else {
           handleError(
