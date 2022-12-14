@@ -1,41 +1,35 @@
 <h1>Game Suggestions</h1>
 <hr />
 <ul class="games">
-     <li>Terraforming Mars</li>
-     <li>Scythe</li>
-     <li>City of Remnants</li>
+     <li>Wingspan</li>
+     <li>The Crew: The Quest for Planet Nine</li>
+     <li>Betrayal at House on the Hill: 3rd Edition</li>
+     <li>Cascadia</li>
+     <li>Wavelength</li>
+     <li>Splendor: Marvel</li>
+     <li>Agricola (Revised Edition)</li>
+     <li>Dungeons and Dragons: Lords of Waterdeep</li>
+     <li>Moonrakers (Buy from moonrakersgame.com)</li>
+     <li>Eclipse: Second Dawn for the Galaxy</li>
      <li>The Castles of Burgundy</li>
-     <li>Lords of Waterdeep</li>
-     <li>Blood Rage</li>
-     <li>Boss Monster 2: The Next Level</li>
-     <li>Eclipse</li>
-     <li>Thurn and Taxis</li>
-     <li>Betrayal at House on the Hill</li>
+     <li>Scythe</li>
      <li>Terraforming Mars</li>
-     <li>Lords of Waterdeep</li>
-     <li>Zombicide</li>
-     <li>Moonrakers</li>
-     <li>Heroscape</li>
+     <li>Orleans</li>
+     <li>Boss Monster 2: The Next Level</li>
+     <li>Boss Monster 3: Rise of the Minibosses</li>
 </ul>
 
 <h2>Kid Games</h2>
 <hr />
 <ul class="games">
      <li>Outfoxed</li>
-     <li>Snailrace</li>
-     <li>Down Force</li>
+     <li>Snail's Race</li>
 </ul>
 
 <script>
-  $('.games > li').each(function() {
-    var game = $(this);
-    var html = game.html();
-    if (html.indexOf('<') > -1) {
-      title = html.substring(0, html.indexOf('<')).split(' ').join('+');
-    }
-    else {
-      title = html.split(' ').join('+');
-    }
-    game.html('<a href="http://www.amazon.com/s/?rh=n:165793011&keywords=' + title + '">' + html + '</a>');
+  document.querySelectorAll('.games > li').forEach((game) => {
+    const title = game.innerHTML;
+    const link = `<a href="http://www.amazon.com/s/?rh=n:165793011&keywords=${title}">${title}</a>`;
+    game.innerHTML = link;
   });
 </script>
