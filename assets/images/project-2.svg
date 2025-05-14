@@ -1,27 +1,114 @@
 <svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
   <style>
     .background {
-      fill: #1E1E1E;
+      fill: #0F172A;
     }
     .outline {
       fill: none;
-      stroke: #3a3a3a;
+      stroke: #1E293B;
       stroke-width: 2;
     }
-    .icon {
-      fill: #ff4d4d;
+    .particle {
+      fill: #60A5FA;
+      opacity: 0.8;
     }
-    .text {
+    .particle-trail {
+      fill: #3B82F6;
+      opacity: 0.4;
+    }
+    .particle-alt {
+      fill: #F472B6;
+      opacity: 0.8;
+    }
+    .particle-alt-trail {
+      fill: #EC4899;
+      opacity: 0.4;
+    }
+    .cursor {
+      fill: #F3F4F6;
+      stroke: #D1D5DB;
+      stroke-width: 1.5;
+    }
+    .grid-line {
+      stroke: #334155;
+      stroke-width: 0.5;
+      opacity: 0.3;
+    }
+    .title {
       font-family: 'Arial', sans-serif;
-      font-size: 24px;
-      fill: #e0e0e0;
+      font-size: 40px;
+      font-weight: bold;
+      fill: #F3F4F6;
+      text-anchor: middle;
+    }
+    .subtitle {
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      fill: #D1D5DB;
       text-anchor: middle;
     }
   </style>
   <rect class="background" width="800" height="450" />
   <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
-  <path class="icon" d="M400 175 L350 250 L450 250 Z" />
-  <path class="icon" d="M350 225 L310 280 L390 280 Z" />
-  <path class="icon" d="M450 225 L410 280 L490 280 Z" />
-  <text class="text" x="400" y="320">Image Placeholder</text>
+  
+  <!-- Grid Background -->
+  <g>
+    <!-- Horizontal lines -->
+    <line class="grid-line" x1="10" y1="50" x2="790" y2="50" />
+    <line class="grid-line" x1="10" y1="100" x2="790" y2="100" />
+    <line class="grid-line" x1="10" y1="150" x2="790" y2="150" />
+    <line class="grid-line" x1="10" y1="200" x2="790" y2="200" />
+    <line class="grid-line" x1="10" y1="250" x2="790" y2="250" />
+    <line class="grid-line" x1="10" y1="300" x2="790" y2="300" />
+    <line class="grid-line" x1="10" y1="350" x2="790" y2="350" />
+    <line class="grid-line" x1="10" y1="400" x2="790" y2="400" />
+    
+    <!-- Vertical lines -->
+    <line class="grid-line" x1="100" y1="10" x2="100" y2="440" />
+    <line class="grid-line" x1="200" y1="10" x2="200" y2="440" />
+    <line class="grid-line" x1="300" y1="10" x2="300" y2="440" />
+    <line class="grid-line" x1="400" y1="10" x2="400" y2="440" />
+    <line class="grid-line" x1="500" y1="10" x2="500" y2="440" />
+    <line class="grid-line" x1="600" y1="10" x2="600" y2="440" />
+    <line class="grid-line" x1="700" y1="10" x2="700" y2="440" />
+  </g>
+  
+  <!-- Particles and Trails -->
+  <!-- Blue Particles -->
+  <circle class="particle" cx="200" cy="100" r="6" />
+  <path class="particle-trail" d="M200,100 Q220,120 240,110 Q260,100 280,120" stroke="#3B82F6" stroke-width="2" fill="none" />
+  
+  <circle class="particle" cx="350" cy="150" r="8" />
+  <path class="particle-trail" d="M350,150 Q370,130 390,150 Q410,170 430,150" stroke="#3B82F6" stroke-width="2" fill="none" />
+  
+  <circle class="particle" cx="500" cy="200" r="5" />
+  <path class="particle-trail" d="M500,200 Q520,220 540,210 Q560,200 580,190" stroke="#3B82F6" stroke-width="2" fill="none" />
+  
+  <circle class="particle" cx="150" cy="250" r="7" />
+  <path class="particle-trail" d="M150,250 Q170,270 190,260 Q210,250 230,260" stroke="#3B82F6" stroke-width="2" fill="none" />
+  
+  <circle class="particle" cx="600" cy="180" r="4" />
+  <path class="particle-trail" d="M600,180 Q620,160 640,170 Q660,180 680,160" stroke="#3B82F6" stroke-width="2" fill="none" />
+  
+  <!-- Pink Particles -->
+  <circle class="particle-alt" cx="250" cy="300" r="5" />
+  <path class="particle-alt-trail" d="M250,300 Q270,280 290,290 Q310,300 330,280" stroke="#EC4899" stroke-width="2" fill="none" />
+  
+  <circle class="particle-alt" cx="450" cy="120" r="7" />
+  <path class="particle-alt-trail" d="M450,120 Q470,140 490,130 Q510,120 530,140" stroke="#EC4899" stroke-width="2" fill="none" />
+  
+  <circle class="particle-alt" cx="550" cy="280" r="6" />
+  <path class="particle-alt-trail" d="M550,280 Q570,260 590,270 Q610,280 630,270" stroke="#EC4899" stroke-width="2" fill="none" />
+  
+  <circle class="particle-alt" cx="300" cy="220" r="4" />
+  <path class="particle-alt-trail" d="M300,220 Q320,200 340,210 Q360,220 380,210" stroke="#EC4899" stroke-width="2" fill="none" />
+  
+  <!-- Cursor -->
+  <circle class="cursor" cx="400" cy="230" r="10" />
+  <circle class="cursor" cx="400" cy="230" r="15" fill="none" stroke="#F3F4F6" stroke-width="1" opacity="0.6" />
+  <circle class="cursor" cx="400" cy="230" r="20" fill="none" stroke="#F3F4F6" stroke-width="0.5" opacity="0.3" />
+  
+  <!-- Title -->
+  <text class="title" x="400" y="350">PROJECT EVERETT</text>
+  <text class="subtitle" x="400" y="380">Interactive Particle Experience</text>
 </svg> 
