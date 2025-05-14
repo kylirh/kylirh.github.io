@@ -25,8 +25,23 @@ github_username: kylirh
 # Build settings
 markdown: kramdown
 theme: minima
+future: false
+strict_front_matter: true
+livereload: true
+
+# SEO settings
+lang: en_US
+social:
+  name: Kylir Horton
+  links:
+    - https://twitter.com/kylir
+    - https://github.com/kylirh
+
+# Plugin settings
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
