@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en_US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building a Modern Personal Website with Jekyll | Kylir Horton</title>
+  <meta name="description" content="The personal website of Kylir Horton - Developer, photographer, and tech enthusiast.">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Building a Modern Personal Website with Jekyll | Kylir Horton</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Building a Modern Personal Website with Jekyll" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In today’s digital landscape, having a personal website is more than just an online presence—it’s a portfolio, a blog, and a hub for your professional identity. After using various platforms and frameworks over the years, I’ve settled on Jekyll for my personal site, and in this post, I’ll explain why it’s an excellent choice for developers." />
+<meta property="og:description" content="In today’s digital landscape, having a personal website is more than just an online presence—it’s a portfolio, a blog, and a hub for your professional identity. After using various platforms and frameworks over the years, I’ve settled on Jekyll for my personal site, and in this post, I’ll explain why it’s an excellent choice for developers." />
+<link rel="canonical" href="https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll.html" />
+<meta property="og:url" content="https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll.html" />
+<meta property="og:site_name" content="Kylir Horton" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-15T20:30:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Building a Modern Personal Website with Jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T20:30:00+00:00","datePublished":"2023-05-15T20:30:00+00:00","description":"In today’s digital landscape, having a personal website is more than just an online presence—it’s a portfolio, a blog, and a hub for your professional identity. After using various platforms and frameworks over the years, I’ve settled on Jekyll for my personal site, and in this post, I’ll explain why it’s an excellent choice for developers.","headline":"Building a Modern Personal Website with Jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll.html"},"url":"https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-title">
+        <a href="/" aria-label="Home">
+          <svg width="40" height="40" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .k-logo {
+      fill: #e0e0e0;
+      transition: fill 0.3s ease;
+    }
+    .k-logo:hover {
+      fill: #ff4d4d;
+    }
+  </style>
+  <path class="k-logo" d="M10 5 L10 45 L20 45 L20 30 L35 45 L47 45 L28 25 L47 5 L35 5 L20 20 L20 5 Z"/>
+</svg> 
+        </a>
+        <a href="/">Kylir Horton</a>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="/blog" >Blog</a></li>
+          <li><a href="/projects" >Projects</a></li>
+          <li><a href="/photography" >Photography</a></li>
+          <li><a href="/wishlist" >Wishlist</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="post">
+  <div class="container">
+    <header class="post-header">
+      <h1 class="post-title">Building a Modern Personal Website with Jekyll</h1>
+      <div class="post-meta">
+        <time datetime="2023-05-15T20:30:00+00:00"
+          >May 15, 2023</time
+        >
+        
+        <span class="post-categories">
+          
+          <a
+            href="/categories/web-development"
+            >web-development</a
+          >,  
+          <a
+            href="/categories/jekyll"
+            >jekyll</a
+          > 
+        </span>
+        
+      </div>
+    </header>
+
+    <div class="post-content"><p>In today’s digital landscape, having a personal website is more than just an online presence—it’s a portfolio, a blog, and a hub for your professional identity. After using various platforms and frameworks over the years, I’ve settled on Jekyll for my personal site, and in this post, I’ll explain why it’s an excellent choice for developers.</p>
+
+<h2 id="why-jekyll">Why Jekyll?</h2>
+
+<p>Jekyll is a static site generator that strikes the perfect balance between simplicity and flexibility. Here are some key advantages:</p>
+
+<h3 id="1-speed-and-security">1. Speed and Security</h3>
+
+<p>Static sites are inherently fast and secure. With no database or server-side processing needed, Jekyll sites load quickly and have a minimal attack surface. This means:</p>
+
+<ul>
+  <li>Lightning-fast page loads</li>
+  <li>No database vulnerabilities to worry about</li>
+  <li>Lower hosting costs (or even free hosting with GitHub Pages)</li>
+</ul>
+
+<h3 id="2-developer-friendly-workflow">2. Developer-Friendly Workflow</h3>
+
+<p>As a developer, I appreciate Jekyll’s workflow:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Install Jekyll</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
+
+<span class="c1"># Create a new site</span>
+<span class="n">jekyll</span> <span class="n">new</span> <span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span>
+
+<span class="c1"># Serve locally with live reload</span>
+<span class="n">bundle</span> <span class="nb">exec</span> <span class="n">jekyll</span> <span class="n">serve</span> <span class="o">--</span><span class="n">livereload</span>
+</code></pre></div></div>
+
+<p>The ability to work with plain text files, use my favorite code editor, and leverage Git for version control makes the development process smooth and enjoyable.</p>
+
+<h3 id="3-markdown-based-content">3. Markdown-Based Content</h3>
+
+<p>Writing content in Markdown is a joy. It’s:</p>
+
+<ul>
+  <li>Clean and distraction-free</li>
+  <li>Easy to learn and use</li>
+  <li>Portable across different platforms</li>
+  <li>Great for including code snippets with syntax highlighting</li>
+</ul>
+
+<h2 id="custom-theming">Custom Theming</h2>
+
+<p>While Jekyll comes with a default theme, creating a custom theme allows for a truly personalized site. The theme system is based on Liquid templates, which provide a good balance of simplicity and power.</p>
+
+<p>For my site redesign, I focused on:</p>
+
+<ul>
+  <li>A dark coding theme that reflects my developer identity</li>
+  <li>Responsive design that works across all devices</li>
+  <li>Fast loading times with minimal JavaScript</li>
+  <li>Clean typography for optimal readability</li>
+</ul>
+
+<h2 id="content-organization">Content Organization</h2>
+
+<p>Jekyll’s content model makes it easy to organize different types of content:</p>
+
+<ul>
+  <li><strong>Blog posts</strong>: Chronologically organized articles</li>
+  <li><strong>Project pages</strong>: Showcase for my development work</li>
+  <li><strong>Photography gallery</strong>: Portfolio of my best photos</li>
+  <li><strong>Static pages</strong>: About me, contact info, etc.</li>
+</ul>
+
+<p>By using collections, I can organize related content and define custom layouts for each type.</p>
+
+<h2 id="deployment-and-hosting">Deployment and Hosting</h2>
+
+<p>One of Jekyll’s biggest advantages is its seamless integration with GitHub Pages:</p>
+
+<ol>
+  <li>Push your Jekyll site to a GitHub repository</li>
+  <li>Enable GitHub Pages in the repository settings</li>
+  <li>Your site is live at <code class="language-plaintext highlighter-rouge">yourusername.github.io</code></li>
+</ol>
+
+<p>This eliminates the need for separate hosting services and simplifies the deployment process. Every time you push changes to your repository, the site is automatically rebuilt and deployed.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Jekyll may not be the newest or flashiest web technology, but it excels at what it’s designed to do: create fast, simple, and elegant static websites. For developers and content creators who value simplicity, control, and performance, Jekyll remains an excellent choice in 2023.</p>
+
+<p>Have you used Jekyll for your personal site? What has your experience been? Let me know in the comments or reach out on social media!</p>
+</div>
+
+    <div class="post-navigation">
+      <div class="post-navigation-links">
+        
+        <a class="prev" href="/jekyll/update/2019/03/11/welcome-to-jekyll.html"
+          >&larr; Welcome to Jekyll!</a
+        >
+         
+        <a class="next" href="/photography/gear/2023/08/23/essential-photography-gear.html"
+          >Essential Photography Gear for Beginners in 2023 &rarr;</a
+        >
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .post {
+    padding: 5rem 0;
+  }
+
+  .post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .post-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-meta {
+    color: #7d7d7d;
+    font-size: 1rem;
+  }
+
+  .post-categories a {
+    color: #ff4d4d;
+  }
+
+  .post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 2rem 0;
+  }
+
+  .post-content h2 {
+    margin-top: 3rem;
+  }
+
+  .post-content a {
+    text-decoration: underline;
+  }
+
+  .post-navigation {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #3a3a3a;
+  }
+
+  .post-navigation-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .post-navigation-links a {
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .post-navigation-links .prev {
+    text-align: left;
+  }
+
+  .post-navigation-links .next {
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .post {
+      padding: 3rem 0;
+    }
+
+    .post-title {
+      font-size: 2.2rem;
+    }
+
+    .post-navigation-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .post-navigation-links a {
+      max-width: 100%;
+    }
+  }
+</style>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About</h3>
+          <p>Kylir Horton's personal website. Developer, photographer, and tech enthusiast.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Connect</h3>
+          <ul>
+            
+            <li><a href="https://github.com/kylirh" target="_blank" rel="noopener">GitHub</a></li>
+            
+            
+            <li><a href="https://twitter.com/kylir" target="_blank" rel="noopener">Twitter</a></li>
+            
+            <li><a href="/feed.xml">RSS Feed</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/photography">Photography</a></li>
+            <li><a href="/wishlist">Wishlist</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kylir Horton. All rights reserved. Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Any JavaScript you want to run on page load
+    });
+  </script>
+</body>
+</html> 

@@ -1,4 +1,207 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://kylir.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kylir.com/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2025-05-14T20:19:27+00:00</updated><id>https://kylir.com/feed.xml</id><title type="html">Kylir Horton</title><subtitle>The personal website of Kylir Horton.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="https://kylir.com/jekyll/update/2019/03/11/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-03-11T22:54:49+00:00</published><updated>2019-03-11T22:54:49+00:00</updated><id>https://kylir.com/jekyll/update/2019/03/11/welcome-to-jekyll</id><content type="html" xml:base="https://kylir.com/jekyll/update/2019/03/11/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://kylir.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kylir.com/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2025-05-14T21:51:17+00:00</updated><id>https://kylir.com/feed.xml</id><title type="html">Kylir Horton</title><subtitle>The personal website of Kylir Horton - Developer, photographer, and tech enthusiast.</subtitle><entry><title type="html">Essential Photography Gear for Beginners in 2023</title><link href="https://kylir.com/photography/gear/2023/08/23/essential-photography-gear.html" rel="alternate" type="text/html" title="Essential Photography Gear for Beginners in 2023" /><published>2023-08-23T16:15:00+00:00</published><updated>2023-08-23T16:15:00+00:00</updated><id>https://kylir.com/photography/gear/2023/08/23/essential-photography-gear</id><content type="html" xml:base="https://kylir.com/photography/gear/2023/08/23/essential-photography-gear.html"><![CDATA[<p>Photography is an incredibly rewarding hobby, but the dizzying array of equipment options can be overwhelming for beginners. In this post, I’ll share my recommendations for essential photography gear that will help you get started without breaking the bank.</p>
+
+<h2 id="camera-the-foundation">Camera: The Foundation</h2>
+
+<p>When it comes to choosing your first “real” camera, you have several options:</p>
+
+<h3 id="mirrorless-vs-dslr">Mirrorless vs. DSLR</h3>
+
+<p>In 2023, mirrorless cameras have largely taken over the market, offering several advantages:</p>
+
+<ul>
+  <li><strong>Smaller size and weight</strong>: Easier to carry around</li>
+  <li><strong>Electronic viewfinder</strong>: What you see is what you get</li>
+  <li><strong>Better video capabilities</strong>: Generally superior autofocus during video</li>
+  <li><strong>Future-proof</strong>: This is where most manufacturers are focusing development</li>
+</ul>
+
+<p>That said, used DSLRs offer excellent value for beginners. You can find high-quality used DSLRs at very reasonable prices.</p>
+
+<h3 id="recommendations">Recommendations</h3>
+
+<p>For beginners, I recommend these options:</p>
+
+<p><strong>Entry-level mirrorless:</strong></p>
+<ul>
+  <li>Sony Alpha a6000 series</li>
+  <li>Fujifilm X-T200 or X-T30</li>
+  <li>Canon EOS M50 Mark II</li>
+</ul>
+
+<p><strong>Entry-level DSLR:</strong></p>
+<ul>
+  <li>Nikon D3500 or D5600</li>
+  <li>Canon Rebel T7i or T8i</li>
+</ul>
+
+<h2 id="lenses-more-important-than-the-camera">Lenses: More Important Than the Camera</h2>
+
+<p>The lens you use has a more significant impact on image quality than the camera body. Start with these:</p>
+
+<h3 id="the-kit-lens">The Kit Lens</h3>
+
+<p>Most cameras come with a “kit lens” (usually an 18-55mm or similar zoom). This is perfectly fine to start with and more versatile than beginners realize.</p>
+
+<h3 id="prime-lens">Prime Lens</h3>
+
+<p>Your first additional lens should be a prime lens (fixed focal length). I recommend a 35mm or 50mm with a wide aperture (f/1.8 or wider). These lenses:</p>
+
+<ul>
+  <li>Force you to “zoom with your feet,” improving composition skills</li>
+  <li>Offer excellent low-light performance</li>
+  <li>Create beautiful background blur (bokeh)</li>
+  <li>Are usually quite affordable (a “nifty fifty” 50mm f/1.8 costs around $125-200)</li>
+</ul>
+
+<h2 id="essential-accessories">Essential Accessories</h2>
+
+<p>Beyond the camera and lens, a few accessories will significantly improve your experience:</p>
+
+<h3 id="1-memory-cards">1. Memory Cards</h3>
+
+<p>Get at least two memory cards with these specifications:</p>
+<ul>
+  <li><strong>Capacity</strong>: 64GB or 128GB</li>
+  <li><strong>Speed</strong>: UHS-I with at least 95MB/s write speed</li>
+  <li><strong>Reliability</strong>: Stick with reputable brands like SanDisk, Lexar, or Sony</li>
+</ul>
+
+<h3 id="2-extra-batteries">2. Extra Batteries</h3>
+
+<p>Camera batteries always die at the worst possible moment. Get at least one extra battery, either from your camera manufacturer or a reputable third party like Wasabi Power.</p>
+
+<h3 id="3-a-decent-camera-bag">3. A Decent Camera Bag</h3>
+
+<p>A proper camera bag protects your gear and makes it easier to carry. Look for:</p>
+<ul>
+  <li>Weather resistance</li>
+  <li>Adequate padding</li>
+  <li>Comfortable to carry</li>
+  <li>Room to grow your collection</li>
+</ul>
+
+<h3 id="4-tripod">4. Tripod</h3>
+
+<p>You don’t need an expensive tripod to start, but avoid the flimsy $20 options. A good budget tripod around $75-100 from brands like Manfrotto, Benro, or MeFOTO will serve you well.</p>
+
+<h2 id="optional-but-useful">Optional But Useful</h2>
+
+<p>These items aren’t essential but can improve your photography:</p>
+
+<h3 id="1-filters">1. Filters</h3>
+
+<p>A UV filter protects your lens, while a circular polarizer reduces glare and enhances colors, especially useful for landscape photography.</p>
+
+<h3 id="2-external-flash">2. External Flash</h3>
+
+<p>An external flash gives you more power and flexibility than your camera’s built-in flash. Look for models that allow you to tilt and rotate the flash head.</p>
+
+<h3 id="3-remote-shutter-release">3. Remote Shutter Release</h3>
+
+<p>This simple accessory lets you trigger your camera without touching it, essential for long exposures and self-portraits.</p>
+
+<h2 id="editing-software">Editing Software</h2>
+
+<p>To complete your photography workflow, you’ll need editing software:</p>
+
+<ul>
+  <li><strong>Free options</strong>: GIMP, RawTherapee, Darktable</li>
+  <li><strong>Subscription</strong>: Adobe Lightroom and Photoshop ($9.99/month)</li>
+  <li><strong>One-time purchase</strong>: Capture One, Affinity Photo, ON1 Photo RAW</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Remember, the best camera is the one you have with you. Start with the basics, learn to use your equipment well, and gradually add pieces as your skills and needs evolve. Photography is about vision and creativity more than gear.</p>
+
+<p>Happy shooting!</p>
+
+<p>What was your first camera? Let me know in the comments!</p>]]></content><author><name></name></author><category term="photography" /><category term="gear" /><summary type="html"><![CDATA[Photography is an incredibly rewarding hobby, but the dizzying array of equipment options can be overwhelming for beginners. In this post, I’ll share my recommendations for essential photography gear that will help you get started without breaking the bank.]]></summary></entry><entry><title type="html">Building a Modern Personal Website with Jekyll</title><link href="https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll.html" rel="alternate" type="text/html" title="Building a Modern Personal Website with Jekyll" /><published>2023-05-15T20:30:00+00:00</published><updated>2023-05-15T20:30:00+00:00</updated><id>https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll</id><content type="html" xml:base="https://kylir.com/web-development/jekyll/2023/05/15/building-with-jekyll.html"><![CDATA[<p>In today’s digital landscape, having a personal website is more than just an online presence—it’s a portfolio, a blog, and a hub for your professional identity. After using various platforms and frameworks over the years, I’ve settled on Jekyll for my personal site, and in this post, I’ll explain why it’s an excellent choice for developers.</p>
+
+<h2 id="why-jekyll">Why Jekyll?</h2>
+
+<p>Jekyll is a static site generator that strikes the perfect balance between simplicity and flexibility. Here are some key advantages:</p>
+
+<h3 id="1-speed-and-security">1. Speed and Security</h3>
+
+<p>Static sites are inherently fast and secure. With no database or server-side processing needed, Jekyll sites load quickly and have a minimal attack surface. This means:</p>
+
+<ul>
+  <li>Lightning-fast page loads</li>
+  <li>No database vulnerabilities to worry about</li>
+  <li>Lower hosting costs (or even free hosting with GitHub Pages)</li>
+</ul>
+
+<h3 id="2-developer-friendly-workflow">2. Developer-Friendly Workflow</h3>
+
+<p>As a developer, I appreciate Jekyll’s workflow:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Install Jekyll</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
+
+<span class="c1"># Create a new site</span>
+<span class="n">jekyll</span> <span class="n">new</span> <span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">site</span>
+
+<span class="c1"># Serve locally with live reload</span>
+<span class="n">bundle</span> <span class="nb">exec</span> <span class="n">jekyll</span> <span class="n">serve</span> <span class="o">--</span><span class="n">livereload</span>
+</code></pre></div></div>
+
+<p>The ability to work with plain text files, use my favorite code editor, and leverage Git for version control makes the development process smooth and enjoyable.</p>
+
+<h3 id="3-markdown-based-content">3. Markdown-Based Content</h3>
+
+<p>Writing content in Markdown is a joy. It’s:</p>
+
+<ul>
+  <li>Clean and distraction-free</li>
+  <li>Easy to learn and use</li>
+  <li>Portable across different platforms</li>
+  <li>Great for including code snippets with syntax highlighting</li>
+</ul>
+
+<h2 id="custom-theming">Custom Theming</h2>
+
+<p>While Jekyll comes with a default theme, creating a custom theme allows for a truly personalized site. The theme system is based on Liquid templates, which provide a good balance of simplicity and power.</p>
+
+<p>For my site redesign, I focused on:</p>
+
+<ul>
+  <li>A dark coding theme that reflects my developer identity</li>
+  <li>Responsive design that works across all devices</li>
+  <li>Fast loading times with minimal JavaScript</li>
+  <li>Clean typography for optimal readability</li>
+</ul>
+
+<h2 id="content-organization">Content Organization</h2>
+
+<p>Jekyll’s content model makes it easy to organize different types of content:</p>
+
+<ul>
+  <li><strong>Blog posts</strong>: Chronologically organized articles</li>
+  <li><strong>Project pages</strong>: Showcase for my development work</li>
+  <li><strong>Photography gallery</strong>: Portfolio of my best photos</li>
+  <li><strong>Static pages</strong>: About me, contact info, etc.</li>
+</ul>
+
+<p>By using collections, I can organize related content and define custom layouts for each type.</p>
+
+<h2 id="deployment-and-hosting">Deployment and Hosting</h2>
+
+<p>One of Jekyll’s biggest advantages is its seamless integration with GitHub Pages:</p>
+
+<ol>
+  <li>Push your Jekyll site to a GitHub repository</li>
+  <li>Enable GitHub Pages in the repository settings</li>
+  <li>Your site is live at <code class="language-plaintext highlighter-rouge">yourusername.github.io</code></li>
+</ol>
+
+<p>This eliminates the need for separate hosting services and simplifies the deployment process. Every time you push changes to your repository, the site is automatically rebuilt and deployed.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Jekyll may not be the newest or flashiest web technology, but it excels at what it’s designed to do: create fast, simple, and elegant static websites. For developers and content creators who value simplicity, control, and performance, Jekyll remains an excellent choice in 2023.</p>
+
+<p>Have you used Jekyll for your personal site? What has your experience been? Let me know in the comments or reach out on social media!</p>]]></content><author><name></name></author><category term="web-development" /><category term="jekyll" /><summary type="html"><![CDATA[In today’s digital landscape, having a personal website is more than just an online presence—it’s a portfolio, a blog, and a hub for your professional identity. After using various platforms and frameworks over the years, I’ve settled on Jekyll for my personal site, and in this post, I’ll explain why it’s an excellent choice for developers.]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="https://kylir.com/jekyll/update/2019/03/11/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-03-11T22:54:49+00:00</published><updated>2019-03-11T22:54:49+00:00</updated><id>https://kylir.com/jekyll/update/2019/03/11/welcome-to-jekyll</id><content type="html" xml:base="https://kylir.com/jekyll/update/2019/03/11/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
