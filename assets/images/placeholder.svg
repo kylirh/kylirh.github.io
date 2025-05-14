@@ -8,20 +8,64 @@
       stroke: #3a3a3a;
       stroke-width: 2;
     }
-    .icon {
-      fill: #ff4d4d;
+    .code-line {
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      fill: #e0e0e0;
     }
-    .text {
+    .code-keyword {
+      fill: #569CD6;
+    }
+    .code-string {
+      fill: #CE9178;
+    }
+    .code-comment {
+      fill: #6A9955;
+    }
+    .code-function {
+      fill: #DCDCAA;
+    }
+    .title {
       font-family: 'Arial', sans-serif;
       font-size: 24px;
       fill: #e0e0e0;
       text-anchor: middle;
     }
+    .k-logo {
+      fill: #ff4d4d;
+    }
   </style>
   <rect class="background" width="800" height="450" />
   <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
-  <path class="icon" d="M400 175 L350 250 L450 250 Z" />
-  <path class="icon" d="M350 225 L310 280 L390 280 Z" />
-  <path class="icon" d="M450 225 L410 280 L490 280 Z" />
-  <text class="text" x="400" y="320">Image Placeholder</text>
+  
+  <!-- Code lines -->
+  <text x="50" y="80" class="code-line">
+    <tspan x="50" dy="0" class="code-keyword">const</tspan> <tspan>createImage = () => {</tspan>
+  </text>
+  <text x="50" y="110" class="code-line">
+    <tspan x="70" dy="0" class="code-keyword">const</tspan> <tspan>canvas = document.</tspan><tspan class="code-function">createElement</tspan><tspan>(</tspan><tspan class="code-string">'canvas'</tspan><tspan>);</tspan>
+  </text>
+  <text x="50" y="140" class="code-line">
+    <tspan x="70" dy="0" class="code-keyword">const</tspan> <tspan>ctx = canvas.</tspan><tspan class="code-function">getContext</tspan><tspan>(</tspan><tspan class="code-string">'2d'</tspan><tspan>);</tspan>
+  </text>
+  <text x="50" y="170" class="code-line">
+    <tspan x="70" dy="0" class="code-comment">// Draw placeholder elements</tspan>
+  </text>
+  <text x="50" y="200" class="code-line">
+    <tspan x="70" dy="0">ctx.</tspan><tspan class="code-function">fillStyle</tspan><tspan> = </tspan><tspan class="code-string">'#ff4d4d'</tspan><tspan>;</tspan>
+  </text>
+  <text x="50" y="230" class="code-line">
+    <tspan x="70" dy="0">ctx.</tspan><tspan class="code-function">fillRect</tspan><tspan>(0, 0, 800, 450);</tspan>
+  </text>
+  <text x="50" y="260" class="code-line">
+    <tspan x="70" dy="0" class="code-keyword">return</tspan> <tspan>canvas;</tspan>
+  </text>
+  <text x="50" y="290" class="code-line">
+    <tspan x="50" dy="0">};</tspan>
+  </text>
+  
+  <!-- Logo -->
+  <path class="k-logo" d="M400 140 L400 210 L420 210 L420 180 L450 210 L475 210 L440 175 L475 140 L450 140 L420 170 L420 140 Z"/>
+  
+  <text class="title" x="400" y="340">Image Placeholder</text>
 </svg> 

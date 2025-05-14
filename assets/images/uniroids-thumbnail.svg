@@ -1,0 +1,97 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background {
+      fill: #0A0E17;
+    }
+    .outline {
+      fill: none;
+      stroke: #1E293B;
+      stroke-width: 2;
+    }
+    .star {
+      fill: #FFFFFF;
+      opacity: 0.8;
+    }
+    .asteroid {
+      fill: #6B7280;
+      stroke: #4B5563;
+      stroke-width: 1.5;
+    }
+    .ship {
+      fill: #60A5FA;
+      stroke: #3B82F6;
+      stroke-width: 1.5;
+    }
+    .ship-trail {
+      fill: #EF4444;
+      opacity: 0.7;
+    }
+    .laser {
+      fill: #10B981;
+      opacity: 0.9;
+    }
+    .title {
+      font-family: 'Arial', sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      fill: #F3F4F6;
+      text-anchor: middle;
+    }
+    .subtitle {
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      fill: #D1D5DB;
+      text-anchor: middle;
+    }
+  </style>
+  <rect class="background" width="800" height="450" />
+  <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
+  
+  <!-- Stars -->
+  <circle class="star" cx="100" cy="50" r="1.5" />
+  <circle class="star" cx="200" cy="120" r="1" />
+  <circle class="star" cx="300" cy="80" r="1.2" />
+  <circle class="star" cx="400" cy="30" r="1" />
+  <circle class="star" cx="500" cy="100" r="1.3" />
+  <circle class="star" cx="600" cy="60" r="1" />
+  <circle class="star" cx="700" cy="90" r="1.4" />
+  <circle class="star" cx="150" cy="150" r="1" />
+  <circle class="star" cx="250" cy="200" r="1.2" />
+  <circle class="star" cx="350" cy="180" r="1" />
+  <circle class="star" cx="450" cy="220" r="1.3" />
+  <circle class="star" cx="550" cy="160" r="1" />
+  <circle class="star" cx="650" cy="190" r="1.5" />
+  <circle class="star" cx="750" cy="170" r="1" />
+  <circle class="star" cx="120" cy="250" r="1.3" />
+  <circle class="star" cx="220" cy="280" r="1" />
+  <circle class="star" cx="320" cy="240" r="1.5" />
+  <circle class="star" cx="420" cy="300" r="1" />
+  <circle class="star" cx="520" cy="260" r="1.2" />
+  <circle class="star" cx="620" cy="270" r="1" />
+  <circle class="star" cx="720" cy="230" r="1.4" />
+  <circle class="star" cx="170" cy="330" r="1" />
+  <circle class="star" cx="270" cy="350" r="1.2" />
+  <circle class="star" cx="370" cy="310" r="1" />
+  <circle class="star" cx="470" cy="370" r="1.3" />
+  <circle class="star" cx="570" cy="340" r="1" />
+  <circle class="star" cx="670" cy="320" r="1.4" />
+  <circle class="star" cx="770" cy="360" r="1" />
+  
+  <!-- Asteroids -->
+  <path class="asteroid" d="M200,150 L220,140 L230,150 L220,170 L200,180 L180,170 L180,160 Z" />
+  <path class="asteroid" d="M650,200 L670,190 L690,200 L685,220 L670,230 L650,225 L645,210 Z" />
+  <path class="asteroid" d="M350,350 L370,340 L385,350 L380,370 L360,380 L340,370 L340,360 Z" />
+  <path class="asteroid" d="M500,120 L515,110 L530,120 L525,135 L510,145 L495,135 L495,125 Z" />
+  
+  <!-- Player Ship -->
+  <path class="ship-trail" d="M400,250 L390,280 L410,280 Z" />
+  <path class="ship" d="M380,240 L400,210 L420,240 L410,250 L390,250 Z" />
+  
+  <!-- Lasers -->
+  <rect class="laser" x="399" y="150" width="2" height="50" rx="1" />
+  <rect class="laser" x="399" y="90" width="2" height="30" rx="1" />
+  
+  <!-- Title -->
+  <text class="title" x="400" y="370">UNIROIDS</text>
+  <text class="subtitle" x="400" y="400">Asteroid Shooter Game</text>
+</svg> 

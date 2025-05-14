@@ -1,0 +1,171 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background {
+      fill: #1E1E1E;
+    }
+    .outline {
+      fill: none;
+      stroke: #3a3a3a;
+      stroke-width: 2;
+    }
+    .editor-bg {
+      fill: #252526;
+    }
+    .editor-sidebar {
+      fill: #333333;
+    }
+    .sidebar-item {
+      fill: #CCCCCC;
+      opacity: 0.8;
+    }
+    .sidebar-folder {
+      fill: #CCCCCC;
+      opacity: 0.9;
+    }
+    .code-text {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      fill: #D4D4D4;
+    }
+    .code-comment {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      fill: #6A9955;
+    }
+    .code-key {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      fill: #9CDCFE;
+    }
+    .code-value {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      fill: #CE9178;
+    }
+    .code-yaml {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      fill: #569CD6;
+    }
+    .line-number {
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 14px;
+      fill: #858585;
+    }
+    .title-bar {
+      fill: #3C3C3C;
+    }
+    .tab-active {
+      fill: #1E1E1E;
+    }
+    .tab-inactive {
+      fill: #2D2D2D;
+    }
+    .tab-text {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      font-size: 12px;
+      fill: #FFFFFF;
+      text-anchor: middle;
+    }
+    .tab-text-inactive {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      font-size: 12px;
+      fill: #CCCCCC;
+      text-anchor: middle;
+    }
+    .icon {
+      fill: #CCCCCC;
+    }
+  </style>
+  
+  <rect class="background" width="800" height="450" />
+  <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
+  
+  <!-- Editor Background -->
+  <rect class="editor-bg" x="30" y="30" width="740" height="390" rx="3" />
+  
+  <!-- Title Bar -->
+  <rect class="title-bar" x="30" y="30" width="740" height="30" rx="3 3 0 0" />
+  
+  <!-- Tabs -->
+  <rect class="tab-active" x="40" y="30" width="150" height="30" />
+  <text class="tab-text" x="115" y="50">_config.yml</text>
+  <rect class="tab-inactive" x="190" y="30" width="150" height="28" />
+  <text class="tab-text-inactive" x="265" y="50">index.md</text>
+  <rect class="tab-inactive" x="340" y="30" width="150" height="28" />
+  <text class="tab-text-inactive" x="415" y="50">Gemfile</text>
+  
+  <!-- Sidebar -->
+  <rect class="editor-sidebar" x="30" y="60" width="180" height="360" />
+  
+  <!-- Sidebar Content -->
+  <rect class="sidebar-folder" x="40" y="80" width="10" height="10" />
+  <text class="sidebar-item" x="60" y="90">_layouts</text>
+  <rect class="sidebar-folder" x="40" y="100" width="10" height="10" />
+  <text class="sidebar-item" x="60" y="110">_includes</text>
+  <rect class="sidebar-folder" x="40" y="120" width="10" height="10" />
+  <text class="sidebar-item" x="60" y="130">_posts</text>
+  <rect class="sidebar-folder" x="40" y="140" width="10" height="10" />
+  <text class="sidebar-item" x="60" y="150">assets</text>
+  <rect class="sidebar-folder" x="40" y="160" width="10" height="10" />
+  <text class="sidebar-item" x="60" y="170">_sass</text>
+  <path class="icon" d="M170,85 L175,90 L170,95" stroke="#CCCCCC" stroke-width="1.5" fill="none" />
+  <path class="icon" d="M170,105 L175,110 L170,115" stroke="#CCCCCC" stroke-width="1.5" fill="none" />
+  <path class="icon" d="M170,125 L175,130 L170,135" stroke="#CCCCCC" stroke-width="1.5" fill="none" />
+  <path class="icon" d="M170,145 L175,150 L170,155" stroke="#CCCCCC" stroke-width="1.5" fill="none" />
+  <path class="icon" d="M170,165 L175,170 L170,175" stroke="#CCCCCC" stroke-width="1.5" fill="none" />
+  
+  <!-- Files -->
+  <text class="sidebar-item" x="60" y="210">_config.yml</text>
+  <text class="sidebar-item" x="60" y="230">index.md</text>
+  <text class="sidebar-item" x="60" y="250">about.md</text>
+  <text class="sidebar-item" x="60" y="270">Gemfile</text>
+  <text class="sidebar-item" x="60" y="290">README.md</text>
+  <text class="sidebar-item" x="60" y="310">.gitignore</text>
+  
+  <!-- Code Editor -->
+  <g>
+    <!-- Line Numbers -->
+    <text class="line-number" x="225" y="90">1</text>
+    <text class="line-number" x="225" y="110">2</text>
+    <text class="line-number" x="225" y="130">3</text>
+    <text class="line-number" x="225" y="150">4</text>
+    <text class="line-number" x="225" y="170">5</text>
+    <text class="line-number" x="225" y="190">6</text>
+    <text class="line-number" x="225" y="210">7</text>
+    <text class="line-number" x="225" y="230">8</text>
+    <text class="line-number" x="225" y="250">9</text>
+    <text class="line-number" x="225" y="270">10</text>
+    <text class="line-number" x="225" y="290">11</text>
+    <text class="line-number" x="225" y="310">12</text>
+    <text class="line-number" x="225" y="330">13</text>
+    <text class="line-number" x="225" y="350">14</text>
+    <text class="line-number" x="225" y="370">15</text>
+    <text class="line-number" x="225" y="390">16</text>
+    
+    <!-- YAML Content -->
+    <text class="code-comment" x="240" y="90"># Site settings</text>
+    <text class="code-key" x="240" y="110">title:</text>
+    <text class="code-value" x="280" y="110">"Developer Portfolio"</text>
+    <text class="code-key" x="240" y="130">email:</text>
+    <text class="code-value" x="290" y="130">"your-email@example.com"</text>
+    <text class="code-key" x="240" y="150">description:</text>
+    <text class="code-value" x="320" y="150">"A modern Jekyll theme for developers"</text>
+    <text class="code-key" x="240" y="170">baseurl:</text>
+    <text class="code-value" x="300" y="170">""</text>
+    <text class="code-key" x="240" y="190">url:</text>
+    <text class="code-value" x="270" y="190">"https://yourusername.github.io"</text>
+    <text class="code-key" x="240" y="210">github_username:</text>
+    <text class="code-value" x="350" y="210">"yourusername"</text>
+    <text class="code-text" x="240" y="230"></text>
+    <text class="code-comment" x="240" y="250"># Build settings</text>
+    <text class="code-key" x="240" y="270">markdown:</text>
+    <text class="code-text" x="310" y="270">kramdown</text>
+    <text class="code-key" x="240" y="290">theme:</text>
+    <text class="code-text" x="290" y="290">minima</text>
+    <text class="code-key" x="240" y="310">plugins:</text>
+    <text class="code-text" x="240" y="330">  - jekyll-feed</text>
+    <text class="code-text" x="240" y="350">  - jekyll-seo-tag</text>
+    <text class="code-text" x="240" y="370">  - jekyll-sitemap</text>
+  </g>
+</svg> 

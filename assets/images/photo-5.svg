@@ -1,0 +1,150 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background {
+      fill: #0D1117;
+    }
+    .outline {
+      fill: none;
+      stroke: #30363D;
+      stroke-width: 2;
+    }
+    .sky {
+      fill: url(#sky-gradient);
+    }
+    .sun {
+      fill: #FF5722;
+    }
+    .sun-glow {
+      fill: url(#sun-glow);
+      opacity: 0.8;
+    }
+    .mountains-far {
+      fill: #5D4037;
+      opacity: 0.8;
+    }
+    .mountains-near {
+      fill: #795548;
+      opacity: 0.9;
+    }
+    .dune-1 {
+      fill: #D7CCC8;
+    }
+    .dune-2 {
+      fill: #BCAAA4;
+    }
+    .dune-3 {
+      fill: #A1887F;
+    }
+    .dune-4 {
+      fill: #8D6E63;
+    }
+    .dune-shadow {
+      fill: #5D4037;
+      opacity: 0.3;
+    }
+    .dune-highlight {
+      fill: #EFEBE9;
+      opacity: 0.3;
+    }
+    .cactus {
+      fill: #33691E;
+    }
+    .cactus-dark {
+      fill: #1B5E20;
+    }
+    .rock {
+      fill: #5D4037;
+      stroke: #4E342E;
+      stroke-width: 0.5;
+    }
+    .frame {
+      fill: none;
+      stroke: #A1887F;
+      stroke-width: 5;
+      opacity: 0.8;
+    }
+    .title {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      fill: #EFEBE9;
+      text-anchor: middle;
+    }
+  </style>
+  
+  <defs>
+    <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A237E" />
+      <stop offset="20%" stop-color="#311B92" />
+      <stop offset="40%" stop-color="#880E4F" />
+      <stop offset="60%" stop-color="#C62828" />
+      <stop offset="80%" stop-color="#EF6C00" />
+      <stop offset="100%" stop-color="#F9A825" />
+    </linearGradient>
+    <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFCC80" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF5722" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <rect class="background" width="800" height="450" />
+  <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
+  
+  <!-- Sky -->
+  <rect class="sky" x="30" y="30" width="740" height="300" />
+  
+  <!-- Sun and Glow -->
+  <circle class="sun-glow" cx="400" cy="120" r="80" />
+  <circle class="sun" cx="400" cy="120" r="40" />
+  
+  <!-- Mountains in far background -->
+  <path class="mountains-far" d="M30,200 L100,150 L150,180 L200,160 L250,190 L300,170 L350,200 L400,150 L450,180 L500,140 L550,170 L600,150 L650,180 L700,160 L770,190 L770,330 L30,330 Z" />
+  
+  <!-- Mountains in near background -->
+  <path class="mountains-near" d="M30,230 L80,190 L130,220 L180,200 L230,230 L280,210 L330,240 L380,220 L430,250 L480,230 L530,260 L580,240 L630,270 L680,250 L730,280 L770,260 L770,330 L30,330 Z" />
+  
+  <!-- Dunes - Back Layer -->
+  <path class="dune-4" d="M30,330 C100,290 150,310 200,280 C250,250 300,260 350,240 C400,220 450,230 500,210 C550,190 600,200 650,180 C700,160 750,170 770,160 L770,330 L30,330 Z" />
+  
+  <!-- Dunes - Middle Layer -->
+  <path class="dune-3" d="M30,330 C70,300 120,320 170,300 C220,280 270,290 320,270 C370,250 420,260 470,240 C520,220 570,230 620,210 C670,190 720,200 770,180 L770,330 L30,330 Z" />
+  
+  <!-- Dunes - Front Middle Layer -->
+  <path class="dune-2" d="M30,330 C120,310 170,330 220,320 C270,310 320,330 370,320 C420,310 470,330 520,320 C570,310 620,330 670,320 C720,310 770,330 770,330 L30,330 Z" />
+  
+  <!-- Dunes - Front Layer -->
+  <path class="dune-1" d="M30,330 C100,320 170,350 240,340 C310,330 380,350 450,340 C520,330 590,350 660,340 C730,330 770,340 770,350 L770,380 L30,380 Z" />
+  
+  <!-- Dune Shadows -->
+  <path class="dune-shadow" d="M220,320 C270,310 320,330 370,320 L370,330 L220,330 Z" />
+  <path class="dune-shadow" d="M520,320 C570,310 620,330 670,320 L670,330 L520,330 Z" />
+  <path class="dune-shadow" d="M170,300 C220,280 270,290 320,270 L320,300 L170,330 Z" opacity="0.2" />
+  <path class="dune-shadow" d="M470,240 C520,220 570,230 620,210 L620,240 L470,270 Z" opacity="0.2" />
+  
+  <!-- Dune Highlights -->
+  <path class="dune-highlight" d="M370,320 C420,310 470,330 520,320 L520,330 L370,330 Z" />
+  <path class="dune-highlight" d="M670,320 C720,310 770,330 770,330 L770,330 L670,330 Z" />
+  <path class="dune-highlight" d="M240,340 C310,330 380,350 450,340 L450,350 L240,350 Z" opacity="0.2" />
+  
+  <!-- Cacti Silhouettes -->
+  <path class="cactus-dark" d="M180,330 L180,300 L170,300 L170,290 L180,290 L180,270 L190,270 L190,290 L200,290 L200,300 L190,300 L190,330 Z" />
+  <path class="cactus" d="M183,330 L183,305 L173,305 L173,295 L183,295 L183,275 L187,275 L187,295 L197,295 L197,305 L187,305 L187,330 Z" />
+  
+  <path class="cactus-dark" d="M580,330 L580,310 L570,310 L570,300 L580,300 L580,280 L590,280 L590,300 L600,300 L600,310 L590,310 L590,330 Z" />
+  <path class="cactus" d="M583,330 L583,315 L573,315 L573,305 L583,305 L583,285 L587,285 L587,305 L597,305 L597,315 L587,315 L587,330 Z" />
+  
+  <!-- Rocks -->
+  <ellipse class="rock" cx="120" cy="335" rx="15" ry="5" />
+  <ellipse class="rock" cx="130" cy="332" rx="10" ry="3" />
+  <ellipse class="rock" cx="110" cy="337" rx="8" ry="2" />
+  
+  <ellipse class="rock" cx="680" cy="335" rx="18" ry="6" />
+  <ellipse class="rock" cx="690" cy="332" rx="12" ry="4" />
+  <ellipse class="rock" cx="670" cy="337" rx="10" ry="3" />
+  
+  <!-- Frame -->
+  <rect class="frame" x="25" y="25" width="750" height="360" rx="3" />
+  
+  <!-- Title -->
+  <text class="title" x="400" y="415">DESERT DUNES</text>
+</svg> 

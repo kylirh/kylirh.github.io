@@ -1,0 +1,116 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background {
+      fill: #121212;
+    }
+    .outline {
+      fill: none;
+      stroke: #2A2A2A;
+      stroke-width: 2;
+    }
+    .photo-frame {
+      fill: #1E1E1E;
+      stroke: #333333;
+      stroke-width: 1;
+    }
+    .photo {
+      fill: #454545;
+    }
+    .photo-highlight {
+      fill: #5A5A5A;
+    }
+    .gallery-header {
+      fill: #1A1A1A;
+    }
+    .title {
+      font-family: 'Arial', sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      fill: #FFFFFF;
+      text-anchor: middle;
+    }
+    .subtitle {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      fill: #BBBBBB;
+      text-anchor: middle;
+    }
+    .menu-item {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      fill: #DDDDDD;
+    }
+    .selected-menu {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      fill: #FFFFFF;
+      font-weight: bold;
+    }
+    .photo-caption {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      fill: #AAAAAA;
+      text-anchor: middle;
+    }
+  </style>
+  <rect class="background" width="800" height="450" />
+  <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
+  
+  <!-- Gallery Header -->
+  <rect class="gallery-header" x="30" y="30" width="740" height="70" />
+  <text class="title" x="400" y="65">PHOTOGRAPHY PORTFOLIO</text>
+  <text class="subtitle" x="400" y="90">Urban Landscapes · Nature · Portrait · Abstract</text>
+  
+  <!-- Menu -->
+  <text class="menu-item" x="100" y="130">HOME</text>
+  <text class="selected-menu" x="180" y="130">GALLERY</text>
+  <text class="menu-item" x="270" y="130">ABOUT</text>
+  <text class="menu-item" x="350" y="130">CONTACT</text>
+  
+  <!-- Photo Grid -->
+  <!-- Row 1 -->
+  <rect class="photo-frame" x="50" y="150" width="160" height="120" />
+  <rect class="photo" x="55" y="155" width="150" height="110" />
+  <polygon class="photo-highlight" points="55,155 205,155 205,265 155,265 155,195 55,195" opacity="0.3" />
+  <text class="photo-caption" x="130" y="285">Urban View</text>
+  
+  <rect class="photo-frame" x="230" y="150" width="160" height="120" />
+  <rect class="photo" x="235" y="155" width="150" height="110" />
+  <polygon class="photo-highlight" points="235,155 385,155 385,265 335,265 335,195 235,195" opacity="0.3" />
+  <text class="photo-caption" x="310" y="285">Mountain Path</text>
+  
+  <rect class="photo-frame" x="410" y="150" width="160" height="120" />
+  <rect class="photo" x="415" y="155" width="150" height="110" />
+  <polygon class="photo-highlight" points="415,155 565,155 565,265 515,265 515,195 415,195" opacity="0.3" />
+  <text class="photo-caption" x="490" y="285">Night Lights</text>
+  
+  <rect class="photo-frame" x="590" y="150" width="160" height="120" />
+  <rect class="photo" x="595" y="155" width="150" height="110" />
+  <polygon class="photo-highlight" points="595,155 745,155 745,265 695,265 695,195 595,195" opacity="0.3" />
+  <text class="photo-caption" x="670" y="285">Sunset Bridge</text>
+  
+  <!-- Row 2 -->
+  <rect class="photo-frame" x="50" y="300" width="160" height="120" />
+  <rect class="photo" x="55" y="305" width="150" height="110" />
+  <polygon class="photo-highlight" points="55,305 205,305 205,415 155,415 155,345 55,345" opacity="0.3" />
+  <text class="photo-caption" x="130" y="435">City Square</text>
+  
+  <rect class="photo-frame" x="230" y="300" width="160" height="120" />
+  <rect class="photo-highlight" x="235" y="305" width="150" height="110" />
+  <text class="photo-caption" x="310" y="435">Ocean View</text>
+  
+  <rect class="photo-frame" x="410" y="300" width="160" height="120" />
+  <rect class="photo" x="415" y="305" width="150" height="110" />
+  <polygon class="photo-highlight" points="415,305 565,305 565,415 515,415 515,345 415,345" opacity="0.3" />
+  <text class="photo-caption" x="490" y="435">Forest Path</text>
+  
+  <rect class="photo-frame" x="590" y="300" width="160" height="120" />
+  <rect class="photo" x="595" y="305" width="150" height="110" />
+  <polygon class="photo-highlight" points="595,305 745,305 745,415 695,415 695,345 595,345" opacity="0.3" />
+  <text class="photo-caption" x="670" y="435">Downtown</text>
+  
+  <!-- Visual Elements -->
+  <line x1="30" y1="130" x2="770" y2="130" stroke="#333333" stroke-width="1" />
+  <circle cx="50" cy="130" r="3" fill="#FFFFFF" />
+  <circle cx="770" cy="130" r="3" fill="#FFFFFF" />
+</svg> 
