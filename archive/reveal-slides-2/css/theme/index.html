@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Dependencies | Kylir Horton</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Dependencies" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The personal website of Kylir Horton." />
+<meta property="og:description" content="The personal website of Kylir Horton." />
+<link rel="canonical" href="https://kylir.com/archive/reveal-slides-2/css/theme/" />
+<meta property="og:url" content="https://kylir.com/archive/reveal-slides-2/css/theme/" />
+<meta property="og:site_name" content="Kylir Horton" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dependencies" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"The personal website of Kylir Horton.","headline":"Dependencies","url":"https://kylir.com/archive/reveal-slides-2/css/theme/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://kylir.com/feed.xml" title="Kylir Horton" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Kylir Horton</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archive/reveal-slides-2/plugin/markdown/example.html">Markdown Demo</a><a class="page-link" href="/archive/reveal-slides-2/css/theme/">Dependencies</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Dependencies</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="dependencies">Dependencies</h2>
+
+<p>Themes are written using Sass to keep things modular and reduce the need for repeated selectors across files. Make sure that you have the reveal.js development environment including the Grunt dependencies installed before proceding: https://github.com/hakimel/reveal.js#full-setup</p>
+
+<p>You also need to install Ruby and then Sass (with <code class="language-plaintext highlighter-rouge">gem install sass</code>).</p>
+
+<h2 id="creating-a-theme">Creating a Theme</h2>
+
+<p>To create your own theme, start by duplicating any <code class="language-plaintext highlighter-rouge">.scss</code> file in <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/source">/css/theme/source</a> and adding it to the compilation list in the <a href="https://github.com/hakimel/reveal.js/blob/master/Gruntfile.js">Gruntfile</a>.</p>
+
+<p>Each theme file does four things in the following order:</p>
+
+<ol>
+  <li>
+    <p><strong>Include <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/mixins.scss">/css/theme/template/mixins.scss</a></strong>
+Shared utility functions.</p>
+  </li>
+  <li>
+    <p><strong>Include <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss">/css/theme/template/settings.scss</a></strong>
+Declares a set of custom variables that the template file (step 4) expects. Can be overridden in step 3.</p>
+  </li>
+  <li>
+    <p><strong>Override</strong>
+This is where you override the default theme. Either by specifying variables (see <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss">settings.scss</a> for reference) or by adding full selectors with hardcoded styles.</p>
+  </li>
+  <li>
+    <p><strong>Include <a href="https://github.com/hakimel/reveal.js/blob/master/css/theme/template/theme.scss">/css/theme/template/theme.scss</a></strong>
+The template theme file which will generate final CSS output based on the currently defined variables.</p>
+  </li>
+</ol>
+
+<p>When you are done, run <code class="language-plaintext highlighter-rouge">grunt themes</code> to compile the Sass file to CSS and you are ready to use your new theme.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Kylir Horton</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Kylir Horton</li><li><a class="u-email" href="mailto:kylirh@gmail.com">kylirh@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/kylirh"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">kylirh</span></a></li><li><a href="https://www.twitter.com/kylir"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">kylir</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The personal website of Kylir Horton.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
