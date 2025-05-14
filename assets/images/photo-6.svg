@@ -1,27 +1,179 @@
 <svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
   <style>
     .background {
-      fill: #1E1E1E;
+      fill: #0D1117;
     }
     .outline {
       fill: none;
-      stroke: #3a3a3a;
+      stroke: #30363D;
       stroke-width: 2;
     }
-    .icon {
-      fill: #ff4d4d;
+    .sky {
+      fill: #1D2933;
     }
-    .text {
+    .sky-light {
+      fill: url(#sky-gradient);
+    }
+    .mountain-far {
+      fill: #2A3B47;
+    }
+    .cliff-dark {
+      fill: #1E2C35;
+    }
+    .cliff-mid {
+      fill: #2A3B47;
+    }
+    .cliff-light {
+      fill: #34495E;
+    }
+    .water-deep {
+      fill: #1F3A4D;
+    }
+    .water-mid {
+      fill: #2E5875;
+    }
+    .water-surface {
+      fill: #3498DB;
+      opacity: 0.5;
+    }
+    .waterfall {
+      fill: #ECF0F1;
+      opacity: 0.8;
+    }
+    .waterfall-splash {
+      fill: #ECF0F1;
+      opacity: 0.6;
+    }
+    .waterfall-mist {
+      fill: #ECF0F1;
+      opacity: 0.3;
+    }
+    .tree-dark {
+      fill: #1E3A23;
+    }
+    .tree-mid {
+      fill: #2E5A34;
+    }
+    .tree-light {
+      fill: #3E7A44;
+    }
+    .rock {
+      fill: #34495E;
+      stroke: #2C3E50;
+      stroke-width: 0.5;
+    }
+    .rock-highlight {
+      fill: #FFFFFF;
+      opacity: 0.1;
+    }
+    .frame {
+      fill: none;
+      stroke: #34495E;
+      stroke-width: 5;
+    }
+    .title {
       font-family: 'Arial', sans-serif;
       font-size: 24px;
-      fill: #e0e0e0;
+      font-weight: 300;
+      fill: #ECF0F1;
       text-anchor: middle;
     }
   </style>
+  
+  <defs>
+    <linearGradient id="sky-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2C3E50" />
+      <stop offset="100%" stop-color="#1D2933" />
+    </linearGradient>
+    <radialGradient id="mist-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ECF0F1" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ECF0F1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
   <rect class="background" width="800" height="450" />
   <rect class="outline" x="10" y="10" width="780" height="430" rx="5" />
-  <path class="icon" d="M400 175 L350 250 L450 250 Z" />
-  <path class="icon" d="M350 225 L310 280 L390 280 Z" />
-  <path class="icon" d="M450 225 L410 280 L490 280 Z" />
-  <text class="text" x="400" y="320">Image Placeholder</text>
+  
+  <!-- Sky -->
+  <rect class="sky" x="30" y="30" width="740" height="200" />
+  <rect class="sky-light" x="30" y="30" width="740" height="100" />
+  
+  <!-- Distant Mountains -->
+  <path class="mountain-far" d="M30,150 L100,100 L150,130 L180,110 L230,140 L270,120 L320,150 L360,110 L410,130 L450,90 L490,120 L520,100 L570,140 L620,110 L680,140 L730,120 L770,150 L770,230 L30,230 Z" />
+  
+  <!-- Left Cliff -->
+  <path class="cliff-dark" d="M30,150 L150,150 L180,170 L200,200 L220,250 L200,300 L180,330 L160,350 L140,370 L30,370 Z" />
+  <path class="cliff-mid" d="M150,150 L220,170 L240,200 L260,250 L240,300 L220,330 L200,350 L180,370 L160,370 L140,370 L160,350 L180,330 L200,300 L220,250 L200,200 L180,170 Z" />
+  <path class="cliff-light" d="M220,170 L280,150 L300,170 L340,200 L320,300 L300,330 L280,350 L260,370 L240,380 L180,380 L200,350 L220,330 L240,300 L260,250 L240,200 Z" />
+  
+  <!-- Right Cliff -->
+  <path class="cliff-dark" d="M770,150 L650,150 L620,170 L600,200 L580,250 L600,300 L620,330 L640,350 L660,370 L770,370 Z" />
+  <path class="cliff-mid" d="M650,150 L580,170 L560,200 L540,250 L560,300 L580,330 L600,350 L620,370 L640,370 L660,370 L640,350 L620,330 L600,300 L580,250 L600,200 L620,170 Z" />
+  <path class="cliff-light" d="M580,170 L520,150 L500,170 L460,200 L480,300 L500,330 L520,350 L540,370 L560,380 L620,380 L600,350 L580,330 L560,300 L540,250 L560,200 Z" />
+  
+  <!-- Trees on Cliffs -->
+  <!-- Left side trees -->
+  <path class="tree-dark" d="M80,170 L90,140 L100,170" stroke-width="2" />
+  <path class="tree-dark" d="M100,160 L110,130 L120,160" stroke-width="2" />
+  <path class="tree-dark" d="M120,180 L130,150 L140,180" stroke-width="2" />
+  <path class="tree-dark" d="M60,180 L70,150 L80,180" stroke-width="2" />
+  
+  <path class="tree-mid" d="M90,180 L100,150 L110,180" stroke-width="2" />
+  <path class="tree-mid" d="M110,190 L120,160 L130,190" stroke-width="2" />
+  <path class="tree-mid" d="M70,200 L80,170 L90,200" stroke-width="2" />
+  <path class="tree-mid" d="M130,200 L140,170 L150,200" stroke-width="2" />
+  
+  <path class="tree-light" d="M100,210 L110,180 L120,210" stroke-width="2" />
+  <path class="tree-light" d="M80,230 L90,200 L100,230" stroke-width="2" />
+  <path class="tree-light" d="M120,220 L130,190 L140,220" stroke-width="2" />
+  
+  <!-- Right side trees -->
+  <path class="tree-dark" d="M720,170 L710,140 L700,170" stroke-width="2" />
+  <path class="tree-dark" d="M700,160 L690,130 L680,160" stroke-width="2" />
+  <path class="tree-dark" d="M680,180 L670,150 L660,180" stroke-width="2" />
+  <path class="tree-dark" d="M740,180 L730,150 L720,180" stroke-width="2" />
+  
+  <path class="tree-mid" d="M710,180 L700,150 L690,180" stroke-width="2" />
+  <path class="tree-mid" d="M690,190 L680,160 L670,190" stroke-width="2" />
+  <path class="tree-mid" d="M730,200 L720,170 L710,200" stroke-width="2" />
+  <path class="tree-mid" d="M670,200 L660,170 L650,200" stroke-width="2" />
+  
+  <path class="tree-light" d="M700,210 L690,180 L680,210" stroke-width="2" />
+  <path class="tree-light" d="M720,230 L710,200 L700,230" stroke-width="2" />
+  <path class="tree-light" d="M680,220 L670,190 L660,220" stroke-width="2" />
+  
+  <!-- Waterfall -->
+  <path class="waterfall" d="M320,150 L360,150 L370,180 L380,220 L390,250 L400,280 L410,320 L420,350 L425,370 L315,370 L320,350 L330,320 L340,280 L350,250 L360,220 L370,180 Z" />
+  
+  <!-- Water Splash and Mist -->
+  <circle class="waterfall-mist" cx="370" cy="370" r="60" />
+  <path class="waterfall-splash" d="M320,370 C340,350 360,360 380,350 C400,340 420,350 430,370 L320,370 Z" />
+  <path class="waterfall-splash" d="M350,370 C360,360 370,355 380,360 C390,365 400,360 410,370 L350,370 Z" />
+  
+  <!-- Rocks around the waterfall -->
+  <ellipse class="rock" cx="300" cy="370" rx="30" ry="15" />
+  <ellipse class="rock-highlight" cx="290" cy="365" rx="10" ry="5" />
+  
+  <ellipse class="rock" cx="440" cy="370" rx="25" ry="12" />
+  <ellipse class="rock-highlight" cx="430" cy="365" rx="8" ry="4" />
+  
+  <ellipse class="rock" cx="370" cy="380" rx="80" ry="20" />
+  <ellipse class="rock-highlight" cx="340" cy="375" rx="15" ry="5" />
+  <ellipse class="rock-highlight" cx="390" cy="375" rx="20" ry="6" />
+  
+  <!-- Pool at the bottom -->
+  <path class="water-deep" d="M30,380 L370,380 L770,380 L770,420 L30,420 Z" />
+  <path class="water-mid" d="M150,380 C250,370 300,360 370,370 C440,360 500,370 650,380 L650,400 L150,400 Z" />
+  <path class="water-surface" d="M200,380 C280,375 320,370 370,375 C420,370 470,375 550,380 L550,385 L200,385 Z" />
+  
+  <!-- Ripples -->
+  <circle class="water-surface" cx="370" cy="380" r="40" fill="none" stroke="#3498DB" stroke-width="1" opacity="0.4" />
+  <circle class="water-surface" cx="370" cy="380" r="30" fill="none" stroke="#3498DB" stroke-width="1" opacity="0.4" />
+  <circle class="water-surface" cx="370" cy="380" r="20" fill="none" stroke="#3498DB" stroke-width="1" opacity="0.4" />
+  
+  <!-- Frame -->
+  <rect class="frame" x="25" y="25" width="750" height="360" rx="3" />
+  
+  <!-- Title -->
+  <text class="title" x="400" y="415">FOREST WATERFALL</text>
 </svg> 
