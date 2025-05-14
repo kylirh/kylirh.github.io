@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+<div class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="page-content">{{ content }}</div>
+  </div>
+</div>
+
+<style>
+  .page {
+    padding: 5rem 0;
+  }
+
+  .page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  .page-title:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #ff4d4d;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .page-description {
+    color: #7d7d7d;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+  }
+
+  .page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .page-content img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: 2rem 0;
+  }
+
+  .page-content h2 {
+    margin-top: 3rem;
+  }
+
+  .page-content a {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .page {
+      padding: 3rem 0;
+    }
+
+    .page-title {
+      font-size: 2.2rem;
+    }
+
+    .page-description {
+      font-size: 1rem;
+    }
+  }
+</style>

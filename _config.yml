@@ -16,7 +16,7 @@
 title: Kylir Horton
 email: kylirh@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The personal website of Kylir Horton.
+  The personal website of Kylir Horton - Developer, photographer, and tech enthusiast.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kylir.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kylir
@@ -28,6 +28,38 @@ theme: minima
 future: false
 strict_front_matter: true
 livereload: true
+
+# Site structure
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  photography:
+    output: true
+    permalink: /photography/:name/
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "photography"
+    values:
+      layout: "photo"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 # SEO settings
 lang: en_US
@@ -42,14 +74,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

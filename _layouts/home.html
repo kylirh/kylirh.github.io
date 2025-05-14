@@ -1,0 +1,172 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>Hi, I'm <span>Kylir Horton</span></h1>
+    <p>
+      Developer, photographer, and tech enthusiast. I build digital experiences
+      that bring ideas to life.
+    </p>
+    <div class="hero-buttons">
+      <a href="{{ '/projects' | relative_url }}" class="primary"
+        >View My Work</a
+      >
+      <a href="{{ '/blog' | relative_url }}" class="secondary">Read My Blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest Projects</h2>
+      <p>Check out some of my recent work and ongoing experiments.</p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="{{ '/assets/images/uniroids-thumbnail.jpg' | relative_url }}"
+            alt="Uniroids Game Project"
+          />
+        </div>
+        <div class="card-content">
+          <h3>Uniroids</h3>
+          <div class="card-meta">HTML5 Game</div>
+          <p>
+            A browser-based asteroid shooter game built with modern web
+            technologies.
+          </p>
+          <a href="{{ '/uniroids' | relative_url }}" class="read-more"
+            >Play Now</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="{{ '/assets/images/project-2.jpg' | relative_url }}"
+            alt="Project 2"
+          />
+        </div>
+        <div class="card-content">
+          <h3>Project Everett</h3>
+          <div class="card-meta">Web Experience</div>
+          <p>
+            An interactive web experience exploring creative coding and
+            animation.
+          </p>
+          <a href="{{ '/everett' | relative_url }}" class="read-more"
+            >View Project</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img
+            src="{{ '/assets/images/project-3.jpg' | relative_url }}"
+            alt="Project 3"
+          />
+        </div>
+        <div class="card-content">
+          <h3>GitHub Pages Template</h3>
+          <div class="card-meta">Open Source</div>
+          <p>A modern Jekyll template for developers to showcase their work.</p>
+          <a href="https://github.com/kylirh" class="read-more"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem">
+      <a href="{{ '/projects' | relative_url }}" class="primary"
+        >View All Projects</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest Blog Posts</h2>
+      <p>Thoughts, tutorials, and insights from my journey in tech.</p>
+    </div>
+
+    <div class="card-grid">
+      {% for post in site.posts limit:3 %}
+      <div class="card">
+        <div class="card-content">
+          <h3>{{ post.title }}</h3>
+          <div class="card-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <a href="{{ post.url | relative_url }}" class="read-more"
+            >Read More</a
+          >
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem">
+      <a href="{{ '/blog' | relative_url }}" class="primary">View All Posts</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Photography</h2>
+      <p>
+        A selection of my favorite captures exploring light, texture, and
+        perspective.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img
+          src="{{ '/assets/images/photo-1.jpg' | relative_url }}"
+          alt="Photo 1"
+        />
+        <div class="gallery-caption">Urban Geometry</div>
+      </div>
+      <div class="gallery-item">
+        <img
+          src="{{ '/assets/images/photo-2.jpg' | relative_url }}"
+          alt="Photo 2"
+        />
+        <div class="gallery-caption">Mountain Sunrise</div>
+      </div>
+      <div class="gallery-item">
+        <img
+          src="{{ '/assets/images/photo-3.jpg' | relative_url }}"
+          alt="Photo 3"
+        />
+        <div class="gallery-caption">Ocean Waves</div>
+      </div>
+      <div class="gallery-item">
+        <img
+          src="{{ '/assets/images/photo-4.jpg' | relative_url }}"
+          alt="Photo 4"
+        />
+        <div class="gallery-caption">Desert Night</div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem">
+      <a href="{{ '/photography' | relative_url }}" class="primary"
+        >View All Photos</a
+      >
+    </div>
+  </div>
+</section>
+
+{{ content }}

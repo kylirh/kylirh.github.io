@@ -1,117 +1,110 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8" />
-    <title>404'd! - Kylir Horton</title>
-    <link rel="stylesheet" href="/error/errors.css" />
-    <script src="//code.jquery.com/jquery-2.0.3.js"></script>
-    <script src="/error/errors.js"></script>
-</head>
-<body>
-    <article class="four-oh-four">
-        <section>
-            <table>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td class="x"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="x"></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <h1><img src="/error/error-32.png" />Sorry, that link is broken.</h1>
-            <h2>Error 404 - Can't find <span id="destination">what you're looking for.</span></h2>
-        </section>
-    </article>
-</body>
-</html>
+---
+layout: default
+title: Page Not Found
+permalink: /404.html
+---
+
+<div class="error-page">
+  <div class="container">
+    <div class="error-content">
+      <h1>404</h1>
+      <h2>Page Not Found</h2>
+      <p>Sorry, the page you're looking for doesn't exist or has been moved.</p>
+      <div class="error-buttons">
+        <a href="{{ '/' | relative_url }}" class="btn primary">Back to Home</a>
+        <a href="{{ '/blog' | relative_url }}" class="btn secondary"
+          >Read Blog</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+  }
+
+  .error-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .error-content h1 {
+    font-size: 8rem;
+    margin: 0;
+    color: #ff4d4d;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .error-content h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .error-content p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+  }
+
+  .error-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn.primary {
+    background-color: #ff4d4d;
+    color: white;
+  }
+
+  .btn.primary:hover {
+    background-color: #e53e3e;
+    transform: translateY(-2px);
+  }
+
+  .btn.secondary {
+    background-color: transparent;
+    border: 1px solid #3a3a3a;
+    color: #e0e0e0;
+  }
+
+  .btn.secondary:hover {
+    border-color: #ff4d4d;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .error-content h1 {
+      font-size: 6rem;
+    }
+
+    .error-content h2 {
+      font-size: 2rem;
+    }
+
+    .error-content p {
+      font-size: 1rem;
+    }
+
+    .error-buttons {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+</style>

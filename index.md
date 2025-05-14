@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Home
 ---
 
-Hello World! I just updated all the things using Copilot.
+I'm a developer, photographer, and tech enthusiast. Welcome to my personal website!
