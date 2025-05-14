@@ -2,9 +2,9 @@ name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
 
 jobs:
   github-pages:
@@ -19,7 +19,7 @@ jobs:
             ${{ runner.os }}-gems-
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: "3.3"
           bundler-cache: true
       - name: Build Jekyll site
         run: |
